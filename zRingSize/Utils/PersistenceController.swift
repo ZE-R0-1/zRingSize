@@ -13,7 +13,7 @@ struct PersistenceController {
     let container: NSPersistentContainer
     
     init() {
-        container = NSPersistentContainer(name: "RingSizeApp")
+        container = NSPersistentContainer(name: "zRingSize")
         container.loadPersistentStores { _, error in
             if let error = error {
                 fatalError("Failed to load persistent stores: \(error)")

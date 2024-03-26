@@ -14,24 +14,28 @@ struct RingView: View {
     @State private var itemTitle = ""
     
     var body: some View {
-        VStack {
-            Ring(size: viewModel.ringSize)
-            Slider(value: $viewModel.ringSize, in: 10...100)
-            Spacer()
-        }
-        .navigationBarTitle("Ring", displayMode: .inline)
-        .navigationBarItems(trailing: Button(action: {
-            showSaveAlert = true
-        }) {
-            Image(systemName: "square.and.pencil")
-        })
-        .alert("제목을 입력하세요", isPresented: $showSaveAlert) {
-            TextField("제목", text: $itemTitle)
-            Button("저장") {
-                viewModel.saveItem(title: itemTitle, size: viewModel.ringSize)
-                itemTitle = ""
+        NavigationView {
+            VStack {
+                Spacer()
+                Slider(value: $viewModel.ringSize, in: 10...100)
+                Spacer()
+                Ring(size: viewModel.ringSize)
+                Spacer()
             }
-            Button("취소", role: .cancel) { }
+            .navigationBarTitle("Ring", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                showSaveAlert = true
+            }) {
+                Image(systemName: "square.and.pencil")
+            })
+            .alert("제목을 입력하세요", isPresented: $showSaveAlert) {
+                TextField("제목", text: $itemTitle)
+                Button("저장") {
+                    viewModel.saveItem(title: itemTitle, size: viewModel.ringSize)
+                    itemTitle = ""
+                }
+                Button("취소", role: .cancel) { }
+            }
         }
     }
 }

@@ -13,28 +13,30 @@ struct FingerView: View {
     @State private var itemTitle = ""
     
     var body: some View {
-        VStack {
-            Finger(thickness: viewModel.fingerThickness)
-            Slider(value: $viewModel.fingerThickness, in: 5...20)
-            Spacer()
-        }
-        .navigationBarTitle("Finger", displayMode: .inline)
-        .navigationBarItems(trailing: Button(action: {
-            showSaveAlert = true
-        }) {
-            Image(systemName: "square.and.pencil")
-        })
-        .alert("제목을 입력하세요", isPresented: $showSaveAlert) {
-            TextField("제목", text: $itemTitle)
-            Button("저장") {
-                if !itemTitle.isEmpty {
-                    viewModel.saveItem(title: itemTitle, size: viewModel.fingerThickness)
-                    itemTitle = ""
-                    showSaveAlert = false // 저장 버튼을 누른 후 Alert를 닫습니다.
-                }
+        NavigationView {
+            VStack {
+                Spacer()
+                Slider(value: $viewModel.fingerThickness, in: 5...20)
+                Spacer()
+                Finger(thickness: viewModel.fingerThickness)
+                Spacer()
             }
-            .disabled(itemTitle.isEmpty) // 제목이 비어 있을 경우 저장 버튼을 비활성화합니다.
-            Button("취소", role: .cancel) { }
+            .navigationBarTitle("Finger", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                showSaveAlert = true
+            }) {
+                Image(systemName: "square.and.pencil")
+            })
+            .alert("제목을 입력하세요", isPresented: $showSaveAlert) {
+                TextField("제목", text: $itemTitle)
+                Button("저장") {
+                    if !itemTitle.isEmpty {
+                        viewModel.saveItem(title: itemTitle, size: viewModel.fingerThickness)
+                        itemTitle = ""
+                    }
+                }
+                Button("취소", role: .cancel) { }
+            }
         }
     }
 }
