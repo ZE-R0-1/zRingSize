@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B036A1622BB2803300546228 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1612BB2803300546228 /* Ring.swift */; };
+		B036A1642BB2804C00546228 /* Finger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1632BB2804C00546228 /* Finger.swift */; };
+		B036A1662BB2806200546228 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1652BB2806200546228 /* PersistenceController.swift */; };
+		B036A1702BB283CD00546228 /* RingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A16F2BB283CD00546228 /* RingViewModel.swift */; };
+		B036A1722BB283F000546228 /* FingerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1712BB283F000546228 /* FingerViewModel.swift */; };
+		B036A1742BB2849800546228 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1732BB2849800546228 /* HistoryViewModel.swift */; };
+		B036A17F2BB2873900546228 /* zRingSize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B036A17D2BB2873900546228 /* zRingSize.xcdatamodeld */; };
 		B0E047BA2BB117B00042E91B /* zRingSizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047B92BB117B00042E91B /* zRingSizeApp.swift */; };
 		B0E047BC2BB117B00042E91B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047BB2BB117B00042E91B /* ContentView.swift */; };
 		B0E047BE2BB117B10042E91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E047BD2BB117B10042E91B /* Assets.xcassets */; };
@@ -14,14 +21,10 @@
 		B0E047D02BB117B20042E91B /* zRingSizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047CF2BB117B20042E91B /* zRingSizeTests.swift */; };
 		B0E047DA2BB117B20042E91B /* zRingSizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047D92BB117B20042E91B /* zRingSizeUITests.swift */; };
 		B0E047DC2BB117B20042E91B /* zRingSizeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047DB2BB117B20042E91B /* zRingSizeUITestsLaunchTests.swift */; };
-		B0E047E92BB139880042E91B /* RingSizeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047E82BB139880042E91B /* RingSizeEntity.swift */; };
-		B0E047EB2BB139A90042E91B /* RingSizerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047EA2BB139A90042E91B /* RingSizerViewModel.swift */; };
-		B0E047EE2BB1444B0042E91B /* zRingSize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0E047EC2BB1444B0042E91B /* zRingSize.xcdatamodeld */; };
-		B0E047F02BB1459F0042E91B /* RingSizeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047EF2BB1459F0042E91B /* RingSizeTab.swift */; };
-		B0E047F22BB145B10042E91B /* FingerThicknessTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F12BB145B10042E91B /* FingerThicknessTab.swift */; };
-		B0E047F42BB145BF0042E91B /* SavedSizesTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F32BB145BF0042E91B /* SavedSizesTab.swift */; };
-		B0E047F62BB145D00042E91B /* SettingsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F52BB145D00042E91B /* SettingsTab.swift */; };
-		B0E047F82BB14CD90042E91B /* FingerThicknessEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F72BB14CD90042E91B /* FingerThicknessEntity.swift */; };
+		B0E047F02BB1459F0042E91B /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047EF2BB1459F0042E91B /* RingView.swift */; };
+		B0E047F22BB145B10042E91B /* FingerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F12BB145B10042E91B /* FingerView.swift */; };
+		B0E047F42BB145BF0042E91B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F32BB145BF0042E91B /* HistoryView.swift */; };
+		B0E047F62BB145D00042E91B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F52BB145D00042E91B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B036A1612BB2803300546228 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
+		B036A1632BB2804C00546228 /* Finger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finger.swift; sourceTree = "<group>"; };
+		B036A1652BB2806200546228 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		B036A16F2BB283CD00546228 /* RingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewModel.swift; sourceTree = "<group>"; };
+		B036A1712BB283F000546228 /* FingerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerViewModel.swift; sourceTree = "<group>"; };
+		B036A1732BB2849800546228 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		B036A1752BB284B300546228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B036A17E2BB2873900546228 /* zRingSize.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = zRingSize.xcdatamodel; sourceTree = "<group>"; };
 		B0E047B62BB117B00042E91B /* zRingSize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zRingSize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E047B92BB117B00042E91B /* zRingSizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zRingSizeApp.swift; sourceTree = "<group>"; };
 		B0E047BB2BB117B00042E91B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,14 +63,10 @@
 		B0E047D52BB117B20042E91B /* zRingSizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zRingSizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E047D92BB117B20042E91B /* zRingSizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zRingSizeUITests.swift; sourceTree = "<group>"; };
 		B0E047DB2BB117B20042E91B /* zRingSizeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zRingSizeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B0E047E82BB139880042E91B /* RingSizeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSizeEntity.swift; sourceTree = "<group>"; };
-		B0E047EA2BB139A90042E91B /* RingSizerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSizerViewModel.swift; sourceTree = "<group>"; };
-		B0E047ED2BB1444B0042E91B /* zRingSize.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = zRingSize.xcdatamodel; sourceTree = "<group>"; };
-		B0E047EF2BB1459F0042E91B /* RingSizeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSizeTab.swift; sourceTree = "<group>"; };
-		B0E047F12BB145B10042E91B /* FingerThicknessTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerThicknessTab.swift; sourceTree = "<group>"; };
-		B0E047F32BB145BF0042E91B /* SavedSizesTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSizesTab.swift; sourceTree = "<group>"; };
-		B0E047F52BB145D00042E91B /* SettingsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTab.swift; sourceTree = "<group>"; };
-		B0E047F72BB14CD90042E91B /* FingerThicknessEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerThicknessEntity.swift; sourceTree = "<group>"; };
+		B0E047EF2BB1459F0042E91B /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		B0E047F12BB145B10042E91B /* FingerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerView.swift; sourceTree = "<group>"; };
+		B0E047F32BB145BF0042E91B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		B0E047F52BB145D00042E91B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +94,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B036A16A2BB281EA00546228 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0E047BB2BB117B00042E91B /* ContentView.swift */,
+				B0E047EF2BB1459F0042E91B /* RingView.swift */,
+				B0E047F12BB145B10042E91B /* FingerView.swift */,
+				B0E047F32BB145BF0042E91B /* HistoryView.swift */,
+				B0E047F52BB145D00042E91B /* SettingsView.swift */,
+				B036A1612BB2803300546228 /* Ring.swift */,
+				B036A1632BB2804C00546228 /* Finger.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B036A1822BB2A8B900546228 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B036A1652BB2806200546228 /* PersistenceController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B036A1832BB2A8CC00546228 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B036A1752BB284B300546228 /* Info.plist */,
+				B0E047BD2BB117B10042E91B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B036A1842BB2A8E500546228 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B036A17D2BB2873900546228 /* zRingSize.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B036A1852BB2A93400546228 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B036A16F2BB283CD00546228 /* RingViewModel.swift */,
+				B036A1712BB283F000546228 /* FingerViewModel.swift */,
+				B036A1732BB2849800546228 /* HistoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		B0E047AD2BB117AF0042E91B = {
 			isa = PBXGroup;
 			children = (
@@ -111,16 +167,11 @@
 			isa = PBXGroup;
 			children = (
 				B0E047B92BB117B00042E91B /* zRingSizeApp.swift */,
-				B0E047BB2BB117B00042E91B /* ContentView.swift */,
-				B0E047EF2BB1459F0042E91B /* RingSizeTab.swift */,
-				B0E047F12BB145B10042E91B /* FingerThicknessTab.swift */,
-				B0E047F32BB145BF0042E91B /* SavedSizesTab.swift */,
-				B0E047F52BB145D00042E91B /* SettingsTab.swift */,
-				B0E047EA2BB139A90042E91B /* RingSizerViewModel.swift */,
-				B0E047E82BB139880042E91B /* RingSizeEntity.swift */,
-				B0E047F72BB14CD90042E91B /* FingerThicknessEntity.swift */,
-				B0E047EC2BB1444B0042E91B /* zRingSize.xcdatamodeld */,
-				B0E047BD2BB117B10042E91B /* Assets.xcassets */,
+				B036A16A2BB281EA00546228 /* Views */,
+				B036A1852BB2A93400546228 /* ViewModels */,
+				B036A1842BB2A8E500546228 /* Models */,
+				B036A1822BB2A8B900546228 /* Utils */,
+				B036A1832BB2A8CC00546228 /* Resources */,
 				B0E047BF2BB117B10042E91B /* Preview Content */,
 			);
 			path = zRingSize;
@@ -281,16 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0E047F82BB14CD90042E91B /* FingerThicknessEntity.swift in Sources */,
-				B0E047F22BB145B10042E91B /* FingerThicknessTab.swift in Sources */,
-				B0E047F02BB1459F0042E91B /* RingSizeTab.swift in Sources */,
+				B036A1662BB2806200546228 /* PersistenceController.swift in Sources */,
+				B0E047F22BB145B10042E91B /* FingerView.swift in Sources */,
+				B036A1702BB283CD00546228 /* RingViewModel.swift in Sources */,
+				B036A1722BB283F000546228 /* FingerViewModel.swift in Sources */,
+				B0E047F02BB1459F0042E91B /* RingView.swift in Sources */,
+				B036A1642BB2804C00546228 /* Finger.swift in Sources */,
+				B036A1622BB2803300546228 /* Ring.swift in Sources */,
+				B036A17F2BB2873900546228 /* zRingSize.xcdatamodeld in Sources */,
 				B0E047BC2BB117B00042E91B /* ContentView.swift in Sources */,
-				B0E047F62BB145D00042E91B /* SettingsTab.swift in Sources */,
+				B0E047F62BB145D00042E91B /* SettingsView.swift in Sources */,
 				B0E047BA2BB117B00042E91B /* zRingSizeApp.swift in Sources */,
-				B0E047E92BB139880042E91B /* RingSizeEntity.swift in Sources */,
-				B0E047EB2BB139A90042E91B /* RingSizerViewModel.swift in Sources */,
-				B0E047F42BB145BF0042E91B /* SavedSizesTab.swift in Sources */,
-				B0E047EE2BB1444B0042E91B /* zRingSize.xcdatamodeld in Sources */,
+				B0E047F42BB145BF0042E91B /* HistoryView.swift in Sources */,
+				B036A1742BB2849800546228 /* HistoryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -431,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -451,11 +505,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"zRingSize/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = zRingSize/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,9 +518,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -479,11 +537,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"zRingSize/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = zRingSize/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,9 +550,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -611,12 +673,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B0E047EC2BB1444B0042E91B /* zRingSize.xcdatamodeld */ = {
+		B036A17D2BB2873900546228 /* zRingSize.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B0E047ED2BB1444B0042E91B /* zRingSize.xcdatamodel */,
+				B036A17E2BB2873900546228 /* zRingSize.xcdatamodel */,
 			);
-			currentVersion = B0E047ED2BB1444B0042E91B /* zRingSize.xcdatamodel */;
+			currentVersion = B036A17E2BB2873900546228 /* zRingSize.xcdatamodel */;
 			path = zRingSize.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
