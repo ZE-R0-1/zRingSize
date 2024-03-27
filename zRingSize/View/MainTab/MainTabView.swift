@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  MainTabView.swift
 //  zRingSize
 //
 //  Created by KMUSER on 2024/03/25.
@@ -7,34 +7,35 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainTabView: View {
+    @State private var selectedTab: MainTabType = .ring
+    
     var body: some View {
-        TabView {
-            RingView()
-                .tabItem {
-                    Label("Ring", systemImage: "circle")
+        TabView(selection: $selectedTab) {
+            ForEach(MainTabType.allCases, id: \.self) { tab in
+                Group {
+                    switch tab {
+                    case .ring:
+                        RingView()
+                    case .finger:
+                        FingerView()
+                    case .history:
+                        HistoryView()
+                    case .settings:
+                        SettingsView()
+                    }
                 }
-            
-            FingerView()
                 .tabItem {
-                    Label("Finger", systemImage: "hand.thumbsdown.fill")
+                    Label(tab.title, image: tab.imageName(selected: selectedTab == tab))
                 }
-            
-            HistoryView()
-                .tabItem {
-                    Label("History", systemImage: "clock")
-                }
-            
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape")
-                }
+                .tag(tab)
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainTabView()
     }
 }
