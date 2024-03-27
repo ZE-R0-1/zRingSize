@@ -8,20 +8,12 @@
 // SettingsView.swift
 import SwiftUI
 
+import SwiftUI
+
 struct SettingsView: View {
-    var ringSizes: [(String, Double)] = [
-        ("Small", 48),
-        ("Medium", 54),
-        ("Large", 62)
-    ]
-    
     var body: some View {
-        NavigationView {
-            List(ringSizes, id: \.0) { size in
-                Text("\(size.0): \(size.1) mm")
-            }
-            .navigationBarTitle("Settings")
-        }
+        // 설정을 관리하는 뷰 구현
+        Text("Settings View")
     }
 }
 

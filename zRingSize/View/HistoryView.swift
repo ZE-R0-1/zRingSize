@@ -5,27 +5,12 @@
 //  Created by KMUSER on 2024/03/25.
 //
 
-// HistoryView.swift
 import SwiftUI
 
 struct HistoryView: View {
-    @StateObject private var viewModel = HistoryViewModel()
-    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.measurements) { measurement in
-                    VStack(alignment: .leading) {
-                        Text(measurement.title ?? "Unnamed")
-                            .font(.headline)
-                        Text("Size: \(measurement.size, specifier: "%.1f")")
-                        Text("Saved: \(measurement.date?.formatted() ?? "")")
-                            .font(.caption)
-                    }
-                }
-            }
-            .navigationBarTitle("History")
-        }
+        // 기록을 보여주는 뷰 구현
+        Text("Record View")
     }
 }
 

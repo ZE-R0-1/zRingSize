@@ -18,7 +18,7 @@ struct MainTabView: View {
                     case .ring:
                         RingView(viewModel: RingViewModel())
                     case .finger:
-                        FingerView()
+                        FingerView(viewModel: FingerViewModel())
                     case .history:
                         HistoryView()
                     case .settings:
