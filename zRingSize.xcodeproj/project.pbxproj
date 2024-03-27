@@ -110,21 +110,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		B036A1832BB2A8CC00546228 /* Resources */ = {
+		B036A1842BB2A8E500546228 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				B036A1752BB284B300546228 /* Info.plist */,
 				B0E047BD2BB117B10042E91B /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		B036A1842BB2A8E500546228 /* Models */ = {
-			isa = PBXGroup;
-			children = (
 				B036A17D2BB2873900546228 /* zRingSize.xcdatamodeld */,
 			);
-			path = Models;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		B0DD229D2BB3ADB800B66190 /* MainTab */ = {
@@ -179,9 +172,8 @@
 			children = (
 				B0E047B92BB117B00042E91B /* zRingSizeApp.swift */,
 				B036A16A2BB281EA00546228 /* View */,
-				B036A1842BB2A8E500546228 /* Models */,
+				B036A1842BB2A8E500546228 /* Resource */,
 				B036A1822BB2A8B900546228 /* Utils */,
-				B036A1832BB2A8CC00546228 /* Resources */,
 				B0E047BF2BB117B10042E91B /* Preview Content */,
 			);
 			path = zRingSize;
@@ -513,7 +505,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"zRingSize/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = zRingSize/Resources/Info.plist;
+				INFOPLIST_FILE = zRingSize/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -545,7 +537,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"zRingSize/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = zRingSize/Resources/Info.plist;
+				INFOPLIST_FILE = zRingSize/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
