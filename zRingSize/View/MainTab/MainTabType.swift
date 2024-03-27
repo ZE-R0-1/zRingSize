@@ -16,9 +16,9 @@ enum MainTabType: String, CaseIterable {
     var title: String {
         switch self {
         case .ring:
-            return "반지사이즈"
+            return "반지"
         case .finger:
-            return "손가락사이즈"
+            return "손가락"
         case .history:
             return "기록"
         case .settings:
@@ -27,6 +27,6 @@ enum MainTabType: String, CaseIterable {
     }
     
     func imageName(selected: Bool) -> String {
-        selected ? "\(rawValue)_fill" : rawValue
+        return ""
     }
 }

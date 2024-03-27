@@ -10,11 +10,11 @@
 		B036A1622BB2803300546228 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1612BB2803300546228 /* Ring.swift */; };
 		B036A1642BB2804C00546228 /* Finger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1632BB2804C00546228 /* Finger.swift */; };
 		B036A1662BB2806200546228 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1652BB2806200546228 /* PersistenceController.swift */; };
-		B036A1702BB283CD00546228 /* RingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A16F2BB283CD00546228 /* RingViewModel.swift */; };
 		B036A1722BB283F000546228 /* FingerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1712BB283F000546228 /* FingerViewModel.swift */; };
 		B036A1742BB2849800546228 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1732BB2849800546228 /* HistoryViewModel.swift */; };
 		B036A17F2BB2873900546228 /* zRingSize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B036A17D2BB2873900546228 /* zRingSize.xcdatamodeld */; };
 		B0DD229F2BB3ADC900B66190 /* MainTabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD229E2BB3ADC900B66190 /* MainTabType.swift */; };
+		B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A62BB3D82900B66190 /* RingViewModel.swift */; };
 		B0E047BA2BB117B00042E91B /* zRingSizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047B92BB117B00042E91B /* zRingSizeApp.swift */; };
 		B0E047BC2BB117B00042E91B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047BB2BB117B00042E91B /* MainTabView.swift */; };
 		B0E047BE2BB117B10042E91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E047BD2BB117B10042E91B /* Assets.xcassets */; };
@@ -49,12 +49,12 @@
 		B036A1612BB2803300546228 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		B036A1632BB2804C00546228 /* Finger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finger.swift; sourceTree = "<group>"; };
 		B036A1652BB2806200546228 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		B036A16F2BB283CD00546228 /* RingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewModel.swift; sourceTree = "<group>"; };
 		B036A1712BB283F000546228 /* FingerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerViewModel.swift; sourceTree = "<group>"; };
 		B036A1732BB2849800546228 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		B036A1752BB284B300546228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B036A17E2BB2873900546228 /* zRingSize.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = zRingSize.xcdatamodel; sourceTree = "<group>"; };
 		B0DD229E2BB3ADC900B66190 /* MainTabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabType.swift; sourceTree = "<group>"; };
+		B0DD22A62BB3D82900B66190 /* RingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewModel.swift; sourceTree = "<group>"; };
 		B0E047B62BB117B00042E91B /* zRingSize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zRingSize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E047B92BB117B00042E91B /* zRingSizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zRingSizeApp.swift; sourceTree = "<group>"; };
 		B0E047BB2BB117B00042E91B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 		B036A16A2BB281EA00546228 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B0DD22A02BB3D64E00B66190 /* Ring */,
 				B0DD229D2BB3ADB800B66190 /* MainTab */,
-				B0E047EF2BB1459F0042E91B /* RingView.swift */,
 				B0E047F12BB145B10042E91B /* FingerView.swift */,
 				B0E047F32BB145BF0042E91B /* HistoryView.swift */,
 				B0E047F52BB145D00042E91B /* SettingsView.swift */,
@@ -138,7 +138,6 @@
 		B036A1852BB2A93400546228 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B036A16F2BB283CD00546228 /* RingViewModel.swift */,
 				B036A1712BB283F000546228 /* FingerViewModel.swift */,
 				B036A1732BB2849800546228 /* HistoryViewModel.swift */,
 			);
@@ -152,6 +151,15 @@
 				B0DD229E2BB3ADC900B66190 /* MainTabType.swift */,
 			);
 			path = MainTab;
+			sourceTree = "<group>";
+		};
+		B0DD22A02BB3D64E00B66190 /* Ring */ = {
+			isa = PBXGroup;
+			children = (
+				B0E047EF2BB1459F0042E91B /* RingView.swift */,
+				B0DD22A62BB3D82900B66190 /* RingViewModel.swift */,
+			);
+			path = Ring;
 			sourceTree = "<group>";
 		};
 		B0E047AD2BB117AF0042E91B = {
@@ -345,13 +353,13 @@
 			files = (
 				B036A1662BB2806200546228 /* PersistenceController.swift in Sources */,
 				B0E047F22BB145B10042E91B /* FingerView.swift in Sources */,
-				B036A1702BB283CD00546228 /* RingViewModel.swift in Sources */,
 				B036A1722BB283F000546228 /* FingerViewModel.swift in Sources */,
 				B0E047F02BB1459F0042E91B /* RingView.swift in Sources */,
 				B036A1642BB2804C00546228 /* Finger.swift in Sources */,
 				B0DD229F2BB3ADC900B66190 /* MainTabType.swift in Sources */,
 				B036A1622BB2803300546228 /* Ring.swift in Sources */,
 				B036A17F2BB2873900546228 /* zRingSize.xcdatamodeld in Sources */,
+				B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */,
 				B0E047BC2BB117B00042E91B /* MainTabView.swift in Sources */,
 				B0E047F62BB145D00042E91B /* SettingsView.swift in Sources */,
 				B0E047BA2BB117B00042E91B /* zRingSizeApp.swift in Sources */,
