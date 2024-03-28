@@ -13,20 +13,19 @@ struct HistoryView: View {
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Sizer.date, ascending: false)]) private var items: FetchedResults<Sizer>
 
     var body: some View {
-        List {
-            ForEach(items) { item in
-                VStack(alignment: .leading) {
-                    Text("Title: \(item.title ?? "")")
-                    Text("Date: \(item.date ?? Date())")
-                    Text("Size: \(item.size)")
+        NavigationView {
+            List {
+                ForEach(items) { item in
+                    VStack(alignment: .leading) {
+                        Text("제목: \(item.title ?? "")")
+                        Text("날짜: \(item.date ?? Date())")
+                        Text("길이: \(item.size)")
+                    }
                 }
+                .onDelete(perform: deleteItems) // 삭제 기능 추가
             }
-            .onDelete(perform: deleteItems) // Delete 기능 추가
+            .navigationBarTitle("History")
         }
-        .navigationBarTitle("History")
-        .navigationBarItems(trailing: NavigationLink(destination: RingView(viewModel: RingViewModel())) {
-            Image(systemName: "plus") // Plus 아이콘을 누르면 RingView로 이동하여 새 데이터 생성 가능
-        })
     }
 
     private func deleteItems(offsets: IndexSet) {

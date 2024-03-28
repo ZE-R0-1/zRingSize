@@ -49,6 +49,9 @@ struct RingView: View {
         newItem.title = title
         newItem.date = Date()
         newItem.size = Double(viewModel.ringSize)
+        
+        title = ""
+        
         do {
             try viewContext.save()
         } catch {
