@@ -90,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B02E51582BB5533700570A10 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B0E047F52BB145D00042E91B /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		B036A16A2BB281EA00546228 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +105,7 @@
 				B0DD22A02BB3D64E00B66190 /* Ring */,
 				B0DD22A82BB3E8F800B66190 /* Finger */,
 				B0E047F32BB145BF0042E91B /* HistoryView.swift */,
-				B0E047F52BB145D00042E91B /* SettingsView.swift */,
+				B02E51582BB5533700570A10 /* Settings */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -503,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"zRingSize/Preview Content\"";
+				DEVELOPMENT_TEAM = XV38VT3FG5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = zRingSize/Resource/Info.plist;
@@ -535,6 +544,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"zRingSize/Preview Content\"";
+				DEVELOPMENT_TEAM = XV38VT3FG5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = zRingSize/Resource/Info.plist;
