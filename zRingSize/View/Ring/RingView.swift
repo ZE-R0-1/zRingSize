@@ -1,14 +1,11 @@
-//
-//  RingView.swift
-//  zRingSize
-//
-//  Created by KMUSER on 2024/03/25.
-//
-
 import SwiftUI
 
 struct RingView: View {
     @ObservedObject var viewModel: RingViewModel
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @State private var showingAlert = false
+    @State private var title = ""
     
     var body: some View {
         NavigationView {
@@ -32,13 +29,31 @@ struct RingView: View {
                     .padding([.leading, .trailing], 20) // 좌우 여백 추가
             }
             .navigationBarTitle("RingSizer", displayMode: .inline)
-            .navigationBarItems(trailing:
-                Button(action: {
-                    // 저장 기능 구현
-                }) {
-                    Text("저장")
+            .navigationBarItems(
+                trailing: Button("저장") {
+                    showingAlert = true
                 }
             )
+            .alert("링사이즈", isPresented: $showingAlert) {
+                TextField("제목을 적어주세요", text: $title)
+                Button("확인", action: saveData)
+                Button("취소") {
+                    showingAlert = false // 알람 창을 닫습니다.
+                }
+            }
+        }
+    }
+    
+    func saveData() {
+        let newItem = Sizer(context: viewContext)
+        newItem.title = title
+        newItem.date = Date()
+        newItem.size = Double(viewModel.ringSize)
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
 }
