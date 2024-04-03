@@ -16,7 +16,7 @@ struct MainTabView: View {
                 Group {
                     switch tab {
                     case .ring:
-                        RingView(viewModel: RingViewModel())
+                        RingView()
                     case .finger:
                         FingerView(viewModel: FingerViewModel())
                     case .history:

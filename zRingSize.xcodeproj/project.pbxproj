@@ -10,6 +10,7 @@
 		B036A1662BB2806200546228 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1652BB2806200546228 /* PersistenceController.swift */; };
 		B036A17F2BB2873900546228 /* zRingSize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B036A17D2BB2873900546228 /* zRingSize.xcdatamodeld */; };
 		B0A28D602BBD12BE00BAA025 /* MeasurementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D5F2BBD12BE00BAA025 /* MeasurementModel.swift */; };
+		B0A28D622BBD25BC00BAA025 /* RingDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D612BBD25BC00BAA025 /* RingDisplayView.swift */; };
 		B0DD229F2BB3ADC900B66190 /* MainTabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD229E2BB3ADC900B66190 /* MainTabType.swift */; };
 		B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A62BB3D82900B66190 /* RingViewModel.swift */; };
 		B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A92BB3E9CD00B66190 /* FingerViewModel.swift */; };
@@ -48,6 +49,7 @@
 		B036A1752BB284B300546228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B036A17E2BB2873900546228 /* zRingSize.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = zRingSize.xcdatamodel; sourceTree = "<group>"; };
 		B0A28D5F2BBD12BE00BAA025 /* MeasurementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementModel.swift; sourceTree = "<group>"; };
+		B0A28D612BBD25BC00BAA025 /* RingDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingDisplayView.swift; sourceTree = "<group>"; };
 		B0DD229E2BB3ADC900B66190 /* MainTabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabType.swift; sourceTree = "<group>"; };
 		B0DD22A62BB3D82900B66190 /* RingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewModel.swift; sourceTree = "<group>"; };
 		B0DD22A92BB3E9CD00B66190 /* FingerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerViewModel.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B0E047EF2BB1459F0042E91B /* RingView.swift */,
+				B0A28D612BBD25BC00BAA025 /* RingDisplayView.swift */,
 				B0DD22A62BB3D82900B66190 /* RingViewModel.swift */,
 			);
 			path = Ring;
@@ -348,6 +351,7 @@
 				B036A1662BB2806200546228 /* PersistenceController.swift in Sources */,
 				B0E047F22BB145B10042E91B /* FingerView.swift in Sources */,
 				B0E047F02BB1459F0042E91B /* RingView.swift in Sources */,
+				B0A28D622BBD25BC00BAA025 /* RingDisplayView.swift in Sources */,
 				B0DD229F2BB3ADC900B66190 /* MainTabType.swift in Sources */,
 				B036A17F2BB2873900546228 /* zRingSize.xcdatamodeld in Sources */,
 				B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */,
