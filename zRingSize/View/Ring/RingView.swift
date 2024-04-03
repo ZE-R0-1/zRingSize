@@ -32,7 +32,6 @@ struct RingView: View {
                     .padding([.leading, .trailing], 70)
                 Spacer()
                 Text("반지 지름: \(String(format: "%.1f", viewModel.ringDiameter * 10))mm")
-                Spacer()
             }
             .navigationBarTitle("RingSizer", displayMode: .inline)
             .navigationBarItems(
@@ -55,7 +54,7 @@ struct RingView: View {
         let newItem = Sizer(context: viewContext)
         newItem.title = title
         newItem.date = Date()
-        newItem.size = Double(viewModel.ringDiameter)
+        newItem.size = viewModel.ringDiameter
         
         title = ""
         
