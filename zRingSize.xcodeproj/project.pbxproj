@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B036A1662BB2806200546228 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B036A1652BB2806200546228 /* PersistenceController.swift */; };
 		B036A17F2BB2873900546228 /* zRingSize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B036A17D2BB2873900546228 /* zRingSize.xcdatamodeld */; };
+		B0A28D602BBD12BE00BAA025 /* MeasurementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D5F2BBD12BE00BAA025 /* MeasurementModel.swift */; };
 		B0DD229F2BB3ADC900B66190 /* MainTabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD229E2BB3ADC900B66190 /* MainTabType.swift */; };
 		B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A62BB3D82900B66190 /* RingViewModel.swift */; };
 		B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A92BB3E9CD00B66190 /* FingerViewModel.swift */; };
@@ -46,6 +47,7 @@
 		B036A1652BB2806200546228 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		B036A1752BB284B300546228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B036A17E2BB2873900546228 /* zRingSize.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = zRingSize.xcdatamodel; sourceTree = "<group>"; };
+		B0A28D5F2BBD12BE00BAA025 /* MeasurementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementModel.swift; sourceTree = "<group>"; };
 		B0DD229E2BB3ADC900B66190 /* MainTabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabType.swift; sourceTree = "<group>"; };
 		B0DD22A62BB3D82900B66190 /* RingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewModel.swift; sourceTree = "<group>"; };
 		B0DD22A92BB3E9CD00B66190 /* FingerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerViewModel.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				B0E047B92BB117B00042E91B /* zRingSizeApp.swift */,
 				B036A16A2BB281EA00546228 /* View */,
+				B0A28D5F2BBD12BE00BAA025 /* MeasurementModel.swift */,
 				B036A1842BB2A8E500546228 /* Resource */,
 				B036A1822BB2A8B900546228 /* Utils */,
 				B0E047BF2BB117B10042E91B /* Preview Content */,
@@ -348,6 +351,7 @@
 				B0DD229F2BB3ADC900B66190 /* MainTabType.swift in Sources */,
 				B036A17F2BB2873900546228 /* zRingSize.xcdatamodeld in Sources */,
 				B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */,
+				B0A28D602BBD12BE00BAA025 /* MeasurementModel.swift in Sources */,
 				B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */,
 				B0E047BC2BB117B00042E91B /* MainTabView.swift in Sources */,
 				B0E047F62BB145D00042E91B /* SettingsView.swift in Sources */,
