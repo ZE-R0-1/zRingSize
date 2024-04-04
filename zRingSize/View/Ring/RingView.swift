@@ -23,7 +23,7 @@ struct RingView: View {
                     .colorInvert()
                     .overlay {
                         GeometryReader { geometry in
-                            RingDisplayView(ringDiameter: viewModel.ringDiameter, geometry: geometry, ringSize: viewModel.filiteredItems.first ?? "")
+                            RingDisplayView(ringDiameter: viewModel.ringDiameter, geometry: geometry, ringSize: viewModel.filteredItems.first ?? "")
                         }
                         .padding()
                     }

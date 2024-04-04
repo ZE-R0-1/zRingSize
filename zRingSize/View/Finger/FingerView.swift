@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FingerView: View {
-    @ObservedObject var viewModel: FingerViewModel
+    @StateObject var viewModel = FingerViewModel()
     @Environment(\.managedObjectContext) private var viewContext
     
     @State private var showingAlert = false
@@ -17,24 +17,20 @@ struct FingerView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                Spacer()
-                
-                Text("손가락 두께: \(Int(viewModel.fingerThickness))")
-                    .padding(.horizontal, 20)
-                
-                Spacer()
-                
-                ZStack {
-                    Rectangle()
-                        .stroke(style: StrokeStyle(lineWidth: 2, dash: [5]))
-                        .foregroundColor(Color.black)
-                        .frame(width: viewModel.fingerThickness, height: 300)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding()
-                
-                Slider(value: $viewModel.fingerThickness, in: 50...200)
-                    .padding([.leading, .trailing], 20)
+                Text("손가락 너비: \(String(format: "%.1f", viewModel.fingerWidth * 10))mm")
+                    .padding()
+                Text("예상 반지 호수: \(viewModel.filteredItems.first ?? "")")
+                Slider(value: $viewModel.fingerWidth, in: 1.50...2.25, step: 0.01)
+                    .padding([.leading, .trailing], 70)
+                Rectangle()
+                    .frame(width: 350.00, height: 450.00, alignment: .center)
+                    .colorInvert()
+                    .overlay {
+                        GeometryReader { geometry in
+                            FingerDisplayView(fingerWidth: viewModel.fingerWidth, geometry: geometry)
+                        }
+                        .padding()
+                    }
             }
             .navigationBarTitle("FingerSizer", displayMode: .inline)
             .navigationBarItems(
@@ -42,7 +38,7 @@ struct FingerView: View {
                     showingAlert = true
                 }
             )
-            .alert("손가락 두께", isPresented: $showingAlert) {
+            .alert("손가락 너비", isPresented: $showingAlert) {
                 TextField("제목을 적어주세요", text: $title)
                 Button("확인", action: saveData)
                 Button("취소") {
@@ -56,7 +52,7 @@ struct FingerView: View {
         let newItem = Sizer(context: viewContext)
         newItem.title = title
         newItem.date = Date()
-        newItem.size = Double(viewModel.fingerThickness)
+        newItem.size = Double(viewModel.fingerWidth)
         
         title = ""
         

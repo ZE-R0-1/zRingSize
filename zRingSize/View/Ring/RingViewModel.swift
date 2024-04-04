@@ -15,7 +15,7 @@ class RingViewModel: ObservableObject {
         return String(format: "%.2f", self.ringDiameter)
     }
     
-    var filiteredItems: [String] {
+    var filteredItems: [String] {
         return measurementModel.ringSizes
             .filter { String(format: "%.2f", $0.value) == self.formattedRingSize }
             .map { $0.key }

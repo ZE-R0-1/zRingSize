@@ -8,5 +8,16 @@
 import SwiftUI
 
 class FingerViewModel: ObservableObject {
-    @Published var fingerThickness: CGFloat = 50 
+    @Published var fingerWidth: CGFloat = 1.50
+    let measurementModel = MeasurementModel()
+    
+    var formattedFingerSize: String {
+        return String(format: "%.2f", self.fingerWidth)
+    }
+    
+    var filteredItems: [String] {
+        return measurementModel.ringSizes
+            .filter { String(format: "%.2f", $0.value) == self.formattedFingerSize }
+            .map { $0.key }
+    }
 }
