@@ -12,12 +12,18 @@ zRingSizeApp
 │   ├── Finger
 │   │   ├── FingerView.swift
 │   │   └── FingerViewModel.swift
-│   ├── HistoryView.swift
-│   └── SettingsView.swift
+│   ├── History
+│   │   └── HistoryView.swift
+│   └── Settings
+│       ├── SettingsView.swift
+│       └── SizeChartView.swift
 ├── Resource
+│   ├── MeasurementModel.swift
 │   ├── Info.plist
 │   ├── Assets.xcassets
 │   └── zRingSize.xcdatamodeld
-└── Utils
-    └── PersistenceController.swift
+├── Utils
+│   └── PersistenceController.swift
+└── Formatter
+    └── TimeFormatting.swift
 ```
