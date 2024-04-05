@@ -17,7 +17,7 @@ struct FingerDisplayView: View {
         
         return Rectangle()
             .stroke(style: StrokeStyle(lineWidth: 3, dash: [5]))
-            .frame(width: widthInPoints, height: 400)
+            .frame(width: widthInPoints, height: 300)
             .cornerRadius(5)
             .position(x: self.geometry.size.width / 2, y: self.geometry.size.height / 2)
     }

@@ -42,7 +42,7 @@ struct FingerView: View {
                 TextField("제목을 적어주세요", text: $title)
                 Button("확인", action: saveData)
                 Button("취소") {
-                    showingAlert = false // 알람 창을 닫습니다.
+                    showingAlert = false
                 }
             }
         }

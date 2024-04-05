@@ -16,10 +16,13 @@ struct HistoryView: View {
         NavigationView {
             List {
                 ForEach(items) { item in
-                    VStack(alignment: .leading) {
-                        Text("제목: \(item.title ?? "")")
-                        Text("날짜: \(item.date ?? Date())")
-                        Text("반지 지름: \(String(format: "%.1f", item.size * 10))mm")
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("제목: \(item.title ?? "")")
+                            Text("너비: \(String(format: "%.1f", item.size * 10))mm")
+                        }
+                        Spacer()
+                        Text("\(calcTimeSince(date: item.date ?? Date()))").foregroundColor(.red)
                     }
                 }
                 .onDelete(perform: deleteItems) // 삭제 기능 추가

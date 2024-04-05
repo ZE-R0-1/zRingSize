@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State private var vibrationOn = false
+    
     var body: some View {
         NavigationView {
             List {
                 // 진동 섹션 추가
                 Section(header: Text("진동")) {
-                    Toggle("진동 허용", isOn: .constant(true))
+                    Toggle("진동 활성화", isOn: $vibrationOn)
+    
                 }
                 
                 Section(header: Text("도움말")) {

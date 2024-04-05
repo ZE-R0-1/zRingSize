@@ -17,7 +17,6 @@ struct RingView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                Spacer()
                 Rectangle()
                     .frame(width: 350.00, height: 350.00, alignment: .center)
                     .colorInvert()
@@ -27,11 +26,10 @@ struct RingView: View {
                         }
                         .padding()
                     }
-                Spacer()
                 Slider(value: $viewModel.ringDiameter, in: 1.50...2.25, step: 0.01)
                     .padding([.leading, .trailing], 70)
-                Spacer()
                 Text("반지 지름: \(String(format: "%.1f", viewModel.ringDiameter * 10))mm")
+                Spacer()
             }
             .navigationBarTitle("RingSizer", displayMode: .inline)
             .navigationBarItems(

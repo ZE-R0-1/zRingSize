@@ -12,6 +12,7 @@
 		B0A28D602BBD12BE00BAA025 /* MeasurementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D5F2BBD12BE00BAA025 /* MeasurementModel.swift */; };
 		B0A28D622BBD25BC00BAA025 /* RingDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D612BBD25BC00BAA025 /* RingDisplayView.swift */; };
 		B0A28D662BBE269200BAA025 /* FingerDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D652BBE269200BAA025 /* FingerDisplayView.swift */; };
+		B0DCA15B2BBE7E3B0096E460 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCA15A2BBE7E3B0096E460 /* TimeFormatting.swift */; };
 		B0DD229F2BB3ADC900B66190 /* MainTabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD229E2BB3ADC900B66190 /* MainTabType.swift */; };
 		B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A62BB3D82900B66190 /* RingViewModel.swift */; };
 		B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A92BB3E9CD00B66190 /* FingerViewModel.swift */; };
@@ -52,6 +53,7 @@
 		B0A28D5F2BBD12BE00BAA025 /* MeasurementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementModel.swift; sourceTree = "<group>"; };
 		B0A28D612BBD25BC00BAA025 /* RingDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingDisplayView.swift; sourceTree = "<group>"; };
 		B0A28D652BBE269200BAA025 /* FingerDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerDisplayView.swift; sourceTree = "<group>"; };
+		B0DCA15A2BBE7E3B0096E460 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		B0DD229E2BB3ADC900B66190 /* MainTabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabType.swift; sourceTree = "<group>"; };
 		B0DD22A62BB3D82900B66190 /* RingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewModel.swift; sourceTree = "<group>"; };
 		B0DD22A92BB3E9CD00B66190 /* FingerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerViewModel.swift; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		B0DCA1592BBE7E210096E460 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				B0DCA15A2BBE7E3B0096E460 /* TimeFormatting.swift */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
 		B0DD229D2BB3ADB800B66190 /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +201,7 @@
 				B0A28D5F2BBD12BE00BAA025 /* MeasurementModel.swift */,
 				B036A1842BB2A8E500546228 /* Resource */,
 				B036A1822BB2A8B900546228 /* Utils */,
+				B0DCA1592BBE7E210096E460 /* Formatter */,
 				B0E047BF2BB117B10042E91B /* Preview Content */,
 			);
 			path = zRingSize;
@@ -356,6 +367,7 @@
 				B0A28D662BBE269200BAA025 /* FingerDisplayView.swift in Sources */,
 				B0E047F02BB1459F0042E91B /* RingView.swift in Sources */,
 				B0A28D622BBD25BC00BAA025 /* RingDisplayView.swift in Sources */,
+				B0DCA15B2BBE7E3B0096E460 /* TimeFormatting.swift in Sources */,
 				B0DD229F2BB3ADC900B66190 /* MainTabType.swift in Sources */,
 				B036A17F2BB2873900546228 /* zRingSize.xcdatamodeld in Sources */,
 				B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */,
