@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct RingView: View {
     @StateObject var viewModel = RingViewModel()
@@ -28,6 +29,12 @@ struct RingView: View {
                     }
                 Slider(value: $viewModel.ringDiameter, in: 1.50...2.25, step: 0.01)
                     .padding([.leading, .trailing], 70)
+                    .onChange(of: viewModel.ringDiameter) { newValue in
+                        if let ringSize = viewModel.filteredItems.first {
+                            generateHapticFeedback(for: ringSize)
+                        }
+                    }
+                
                 Text("반지 지름: \(String(format: "%.1f", viewModel.ringDiameter * 10))mm")
                 Spacer()
             }
@@ -62,6 +69,11 @@ struct RingView: View {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+    }
+    
+    private func generateHapticFeedback(for ringSize: String) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
     }
 }
 
