@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct FingerView: View {
     @StateObject var viewModel = FingerViewModel()
@@ -13,6 +14,8 @@ struct FingerView: View {
     
     @State private var showingAlert = false
     @State private var title = ""
+    
+    @AppStorage("vibrationEnabled") private var isVibrationEnabled = true
     
     var body: some View {
         NavigationView {
@@ -22,6 +25,11 @@ struct FingerView: View {
                 Text("예상 반지 호수: \(viewModel.filteredItems.first ?? "")")
                 Slider(value: $viewModel.fingerWidth, in: 1.50...2.25, step: 0.01)
                     .padding([.leading, .trailing], 70)
+                    .onChange(of: viewModel.fingerWidth) { newValue in
+                        if isVibrationEnabled {
+                            generateHapticFeedback()
+                        }
+                    }
                 Rectangle()
                     .frame(width: 350.00, height: 450.00, alignment: .center)
                     .colorInvert()
@@ -62,6 +70,11 @@ struct FingerView: View {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+    }
+    
+    private func generateHapticFeedback() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.warning)
     }
 }
 

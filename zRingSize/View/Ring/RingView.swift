@@ -15,6 +15,8 @@ struct RingView: View {
     @State private var showingAlert = false
     @State private var title = ""
     
+    @AppStorage("vibrationEnabled") private var isVibrationEnabled = true
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
@@ -30,8 +32,8 @@ struct RingView: View {
                 Slider(value: $viewModel.ringDiameter, in: 1.50...2.25, step: 0.01)
                     .padding([.leading, .trailing], 70)
                     .onChange(of: viewModel.ringDiameter) { newValue in
-                        if let ringSize = viewModel.filteredItems.first {
-                            generateHapticFeedback(for: ringSize)
+                        if isVibrationEnabled {
+                            generateHapticFeedback()
                         }
                     }
                 
@@ -71,7 +73,7 @@ struct RingView: View {
         }
     }
     
-    private func generateHapticFeedback(for ringSize: String) {
+    private func generateHapticFeedback() {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
     }
