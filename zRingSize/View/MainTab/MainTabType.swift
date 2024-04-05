@@ -26,7 +26,16 @@ enum MainTabType: String, CaseIterable {
         }
     }
     
-    func imageName(selected: Bool) -> String {
-        selected ? "\(rawValue)_fill" : rawValue
+    var systemImageName: String {
+        switch self {
+        case .ring:
+            return "ring.circle"
+        case .finger:
+            return "hand.point.up"
+        case .history:
+            return "list.bullet.circle"
+        case .settings:
+            return "gearshape"
+        }
     }
 }

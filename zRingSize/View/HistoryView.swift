@@ -27,7 +27,7 @@ struct HistoryView: View {
                 }
                 .onDelete(perform: deleteItems) // 삭제 기능 추가
             }
-            .navigationBarTitle("History")
+            .navigationBarTitle("기록")
         }
     }
 

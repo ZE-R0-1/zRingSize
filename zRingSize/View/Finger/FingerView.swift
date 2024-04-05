@@ -40,7 +40,7 @@ struct FingerView: View {
                         .padding()
                     }
             }
-            .navigationBarTitle("FingerSizer", displayMode: .inline)
+            .navigationBarTitle("손가락", displayMode: .inline)
             .navigationBarItems(
                 trailing: Button("저장") {
                     showingAlert = true
@@ -73,8 +73,8 @@ struct FingerView: View {
     }
     
     private func generateHapticFeedback() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.warning)
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
 }
 

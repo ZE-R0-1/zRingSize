@@ -26,7 +26,8 @@ struct MainTabView: View {
                     }
                 }
                 .tabItem {
-                    Label(tab.title, image: tab.imageName(selected: selectedTab == tab))
+                    Image(systemName: tab.systemImageName)
+                    Text(tab.title)
                 }
                 .tag(tab)
             }

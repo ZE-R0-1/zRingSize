@@ -17,32 +17,13 @@ struct SettingsView: View {
                     Toggle("진동 허용", isOn: $isVibrationEnabled)
                 }
                 
-                Section(header: Text("도움말")) {
-                    NavigationLink(destination: HelpView()) {
-                        Text("도움말 및 지원")
-                    }
-                    NavigationLink(destination: AboutView()) {
-                        Text("앱 정보")
-                    }
+                Section(header: Text("정보")) {
+                    NavigationLink("반지 기준 표", destination: SizeChartView())
                 }
             }
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("설정")
         }
-    }
-}
-
-struct HelpView: View {
-    var body: some View {
-        Text("도움말 및 지원")
-            .navigationBarTitle("도움말")
-    }
-}
-
-struct AboutView: View {
-    var body: some View {
-        Text("앱 정보")
-            .navigationBarTitle("앱 정보")
     }
 }
 
