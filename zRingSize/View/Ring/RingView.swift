@@ -30,7 +30,7 @@ struct RingView: View {
                         }
                         .padding()
                     }
-                Slider(value: $viewModel.ringDiameter, in: 1.50...2.25, step: 0.01)
+                Slider(value: $viewModel.ringDiameter, in: 1.31...2.25, step: 0.01)
                     .padding([.leading, .trailing], 70)
                     .onChange(of: viewModel.ringDiameter) { newValue in
                         if isVibrationEnabled {

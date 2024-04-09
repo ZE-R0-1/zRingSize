@@ -23,7 +23,7 @@ struct FingerView: View {
                 Text("손가락 너비: \(String(format: "%.1f", viewModel.fingerWidth * 10))mm")
                     .padding()
                 Text("예상 반지 호수: \(viewModel.filteredItems.first ?? "")")
-                Slider(value: $viewModel.fingerWidth, in: 1.50...2.25, step: 0.01)
+                Slider(value: $viewModel.fingerWidth, in: 1.31...2.25, step: 0.01)
                     .padding([.leading, .trailing], 70)
                     .onChange(of: viewModel.fingerWidth) { newValue in
                         if isVibrationEnabled {
