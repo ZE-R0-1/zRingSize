@@ -9,6 +9,12 @@ import SwiftUI
 
 struct MeasurementModel {
     let ringSizes: [String: CGFloat] = [
+        "1호": 1.31,
+        "2호": 1.36,
+        "3호": 1.38,
+        "4호": 1.42,
+        "5호": 1.45,
+        "6호": 1.47,
         "7호": 1.50,
         "8호": 1.54,
         "9호": 1.58,
