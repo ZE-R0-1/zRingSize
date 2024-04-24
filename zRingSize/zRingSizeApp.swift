@@ -10,12 +10,10 @@ import SwiftUI
 @main
 struct zRingSizeApp: App {
     
-    let persistenceContainer = PersistenceController.shared
-    
     var body: some Scene {
         WindowGroup {
             MainTabView()
-                .environment(\.managedObjectContext, persistenceContainer.container.viewContext)
         }
     }
 }
+

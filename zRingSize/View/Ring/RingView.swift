@@ -10,7 +10,6 @@ import UIKit
 
 struct RingView: View {
     @StateObject var viewModel = RingViewModel()
-    @Environment(\.managedObjectContext) private var viewContext
     
     @State private var showingAlert = false
     @State private var title = ""
@@ -49,29 +48,27 @@ struct RingView: View {
             )
             .alert("링사이즈", isPresented: $showingAlert) {
                 TextField("제목을 적어주세요", text: $title)
-                Button("확인", action: saveData)
+                Button("확인") {
+                    saveData() // 함수 호출
+                    showingAlert = false
+                    title = ""
+                }
                 Button("취소") {
                     showingAlert = false
+                    title = ""
                 }
             }
         }
     }
     
-    
-    func saveData() {
-        let newItem = Sizer(context: viewContext)
-        newItem.title = title
-        newItem.date = Date()
-        newItem.size = viewModel.ringDiameter
+    private func saveData() {
+        let formattedRingDiameter = String(format: "%.2f", viewModel.ringDiameter)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let formattedDate = dateFormatter.string(from: Date())
         
-        title = ""
-        
-        do {
-            try viewContext.save()
-        } catch {
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
+        let record = SizeRecord(id: 0, title: title, size: formattedRingDiameter, date: formattedDate)
+        _ = ModelManager.getInstance().SaveRecord(record: record)
     }
     
     private func generateHapticFeedback() {
@@ -85,3 +82,4 @@ struct RingView_Previews: PreviewProvider {
         RingView()
     }
 }
+

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MeasurementModel {
+struct SizeModel {
     let ringSizes: [String: CGFloat] = [
         "1호": 1.31,
         "2호": 1.36,

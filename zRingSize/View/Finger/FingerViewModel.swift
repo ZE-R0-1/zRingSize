@@ -9,7 +9,7 @@ import SwiftUI
 
 class FingerViewModel: ObservableObject {
     @Published var fingerWidth: CGFloat = 1.50
-    let measurementModel = MeasurementModel()
+    let measurementModel = SizeModel()
     
     var formattedFingerSize: String {
         return String(format: "%.2f", self.fingerWidth)

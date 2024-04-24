@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SizeChartView: View {
-    let measurementModel = MeasurementModel()
+    let measurementModel = SizeModel()
     
     let columns: [GridItem] = [
         GridItem(.flexible(), alignment: .leading),
