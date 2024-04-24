@@ -266,8 +266,8 @@
 		B0E047B82BB117B00042E91B /* zRingSize */ = {
 			isa = PBXGroup;
 			children = (
-				B0CF52FC2BD883B400DA1841 /* Helper */,
 				B0E047B92BB117B00042E91B /* zRingSizeApp.swift */,
+				B0CF52FC2BD883B400DA1841 /* Helper */,
 				B036A16A2BB281EA00546228 /* View */,
 				B036A1842BB2A8E500546228 /* Resource */,
 				B0DCA1592BBE7E210096E460 /* Formatter */,

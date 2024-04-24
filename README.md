@@ -2,28 +2,33 @@
 ```
 zRingSizeApp
 ├── zRingSizeApp.xcodeproj
+├── Helper
+│   └── FMDB
 ├── View
 │   ├── MainTab
 │   │   ├── MainTabView.swift
 │   │   └── MainTabType.swift
 │   ├── Ring
 │   │   ├── RingView.swift
-│   │   └── RingViewModel.swift
+│   │   ├── RingViewModel.swift
+│   │   └── RingDisplayView.swift
 │   ├── Finger
 │   │   ├── FingerView.swift
-│   │   └── FingerViewModel.swift
+│   │   ├── FingerViewModel.swift
+│   │   └── FingerDisplayView.swift
 │   ├── History
-│   │   └── HistoryView.swift
+│   │   ├── HistoryView.swift
+│   │   └── HistoryViewModel.swift
 │   └── Settings
 │       ├── SettingsView.swift
 │       └── SizeChartView.swift
 ├── Resource
-│   ├── MeasurementModel.swift
+│   ├── zRingSize.db
 │   ├── Info.plist
-│   ├── Assets.xcassets
-│   └── zRingSize.xcdatamodeld
-├── Utils
-│   └── PersistenceController.swift
+│   ├── Util.swift
+│   ├── SizeModel.swift
+│   ├── ModelManager.swift
+│   └── SizeRecord.swift
 └── Formatter
     └── TimeFormatting.swift
 ```
