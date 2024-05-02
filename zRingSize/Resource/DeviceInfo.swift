@@ -18,6 +18,7 @@ struct DeviceInfo {
         DeviceInfo(nativeWidth: 640, nativeHeight: 1136, screenSize: 4),
         DeviceInfo(nativeWidth: 750, nativeHeight: 1334, screenSize: 4.7),
         DeviceInfo(nativeWidth: 1080, nativeHeight: 2340, screenSize: 5.4),
+        DeviceInfo(nativeWidth: 1179, nativeHeight: 2556, screenSize: 6.1),
         DeviceInfo(nativeWidth: 1242, nativeHeight: 2208, screenSize: 5.5)
     ]
     
