@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("vibrationEnabled") private var isVibrationEnabled = false
+    @AppStorage("vibrationEnabled") private var isVibrationEnabled = true
     
     var body: some View {
         NavigationView {

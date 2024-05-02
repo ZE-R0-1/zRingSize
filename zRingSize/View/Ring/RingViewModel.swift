@@ -8,7 +8,8 @@
 import SwiftUI
 
 class RingViewModel: ObservableObject {
-    @Published var ringDiameter: CGFloat = 1.50
+    @Published var ringDiameter: CGFloat = 1.31
+    
     let measurementModel = SizeModel()
     
     var formattedRingSize: String {

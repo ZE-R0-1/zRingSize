@@ -35,7 +35,7 @@ class ModelManager {
             let resultset: FMResultSet? = try shareInstance.database?.executeQuery("SELECT * FROM sizer", values: nil)
             if resultset != nil {
                 while resultset!.next() {
-                    let record = SizeRecord(id: Int32(Int((resultset!.int(forColumn: "id")))),
+                    let record = SizeRecord(id: Int(resultset!.int(forColumn: "id")),
                                             title: (resultset!.string(forColumn: "title")!),
                                             size: (resultset!.string(forColumn: "size")!),
                                             date: (resultset!.string(forColumn: "date")!))

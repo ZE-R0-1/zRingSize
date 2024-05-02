@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B03A6F272BE36992007FCF3C /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A6F262BE36992007FCF3C /* DeviceInfo.swift */; };
+		B03A6F2B2BE37923007FCF3C /* RingDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A6F2A2BE37923007FCF3C /* RingDisplayView.swift */; };
 		B03E6C4A2BD8D0BA0015AA9A /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E6C492BD8D0BA0015AA9A /* HistoryViewModel.swift */; };
 		B056BB4B2BD8C7CD0066AE48 /* zRingSize.db in Resources */ = {isa = PBXBuildFile; fileRef = B056BB4A2BD8C7CD0066AE48 /* zRingSize.db */; };
 		B0A1CD102BBFBBEC00C85520 /* SizeChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A1CD0F2BBFBBEC00C85520 /* SizeChartView.swift */; };
 		B0A28D602BBD12BE00BAA025 /* SizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D5F2BBD12BE00BAA025 /* SizeModel.swift */; };
-		B0A28D622BBD25BC00BAA025 /* RingDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D612BBD25BC00BAA025 /* RingDisplayView.swift */; };
 		B0A28D662BBE269200BAA025 /* FingerDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D652BBE269200BAA025 /* FingerDisplayView.swift */; };
 		B0CF52F42BD8829F00DA1841 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF52EA2BD8829E00DA1841 /* FMResultSet.m */; };
 		B0CF52F52BD8829F00DA1841 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF52EC2BD8829E00DA1841 /* FMDatabase.m */; };
@@ -58,11 +59,12 @@
 
 /* Begin PBXFileReference section */
 		B036A1752BB284B300546228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = zRingSize/Resource/Info.plist; sourceTree = SOURCE_ROOT; };
+		B03A6F262BE36992007FCF3C /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		B03A6F2A2BE37923007FCF3C /* RingDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingDisplayView.swift; sourceTree = "<group>"; };
 		B03E6C492BD8D0BA0015AA9A /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		B056BB4A2BD8C7CD0066AE48 /* zRingSize.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = zRingSize.db; sourceTree = "<group>"; };
 		B0A1CD0F2BBFBBEC00C85520 /* SizeChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeChartView.swift; sourceTree = "<group>"; };
 		B0A28D5F2BBD12BE00BAA025 /* SizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeModel.swift; sourceTree = "<group>"; };
-		B0A28D612BBD25BC00BAA025 /* RingDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingDisplayView.swift; sourceTree = "<group>"; };
 		B0A28D652BBE269200BAA025 /* FingerDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerDisplayView.swift; sourceTree = "<group>"; };
 		B0CF52E82BD8829D00DA1841 /* zRingSize-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zRingSize-Bridging-Header.h"; sourceTree = "<group>"; };
 		B0CF52E92BD8829E00DA1841 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				B0A28D5F2BBD12BE00BAA025 /* SizeModel.swift */,
 				B0CF53022BD88B9100DA1841 /* ModelManager.swift */,
 				B0CF53042BD88D1B00DA1841 /* SizeRecord.swift */,
+				B03A6F262BE36992007FCF3C /* DeviceInfo.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -227,7 +230,7 @@
 			children = (
 				B0E047EF2BB1459F0042E91B /* RingView.swift */,
 				B0DD22A62BB3D82900B66190 /* RingViewModel.swift */,
-				B0A28D612BBD25BC00BAA025 /* RingDisplayView.swift */,
+				B03A6F2A2BE37923007FCF3C /* RingDisplayView.swift */,
 			);
 			path = Ring;
 			sourceTree = "<group>";
@@ -434,12 +437,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E047F22BB145B10042E91B /* FingerView.swift in Sources */,
+				B03A6F2B2BE37923007FCF3C /* RingDisplayView.swift in Sources */,
 				B0A28D662BBE269200BAA025 /* FingerDisplayView.swift in Sources */,
 				B0CF52F52BD8829F00DA1841 /* FMDatabase.m in Sources */,
 				B0CF52F82BD8829F00DA1841 /* FMDatabasePool.m in Sources */,
 				B03E6C4A2BD8D0BA0015AA9A /* HistoryViewModel.swift in Sources */,
 				B0E047F02BB1459F0042E91B /* RingView.swift in Sources */,
-				B0A28D622BBD25BC00BAA025 /* RingDisplayView.swift in Sources */,
+				B03A6F272BE36992007FCF3C /* DeviceInfo.swift in Sources */,
 				B0DCA15B2BBE7E3B0096E460 /* TimeFormatting.swift in Sources */,
 				B0CF52FE2BD887D500DA1841 /* Util.swift in Sources */,
 				B0A1CD102BBFBBEC00C85520 /* SizeChartView.swift in Sources */,

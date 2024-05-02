@@ -8,7 +8,7 @@
 import Foundation
 
 struct SizeRecord: Identifiable {
-    var id: Int32
+    var id: Int
     var title: String
     var size: String
     var date: String
