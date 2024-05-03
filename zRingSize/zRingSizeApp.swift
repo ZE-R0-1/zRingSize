@@ -15,5 +15,9 @@ struct zRingSizeApp: App {
             MainTabView()
         }
     }
+    
+    init() {
+        Util.share.copyDatabase(dbName: "zRingSize.db")
+    }
 }
 

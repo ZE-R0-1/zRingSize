@@ -23,7 +23,7 @@ class Util {
     
     //MARK:- If Database path is not exists the creating database path
     func copyDatabase(dbName: String) {
-        let dbPath = getPath(dbName: "zRingSize")
+        let dbPath = getPath(dbName: "zRingSize.db")
         let fileManager = FileManager.default
         
         if !fileManager.fileExists(atPath: dbPath) {
