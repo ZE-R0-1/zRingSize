@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 struct HistoryView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -13,26 +14,31 @@ struct HistoryView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.items.indices, id: \.self) { index in
-                    let item = viewModel.items[index]
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("제목: \(item.title)")
-                            Text("너비: \(String(format: "%.1f", (Double(item.size) ?? 0) * 10))mm")
+            VStack {
+                List {
+                    ForEach(viewModel.items.indices, id: \.self) { index in
+                        let item = viewModel.items[index]
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("제목: \(item.title)")
+                                Text("너비: \(String(format: "%.1f", (Double(item.size) ?? 0) * 10))mm")
+                            }
+                            Spacer()
+                            Text("\(calcTimeSince(dateString: item.date))")
+                                .foregroundColor(calcTimeColor(dateString: item.date))
                         }
-                        Spacer()
-                        Text("\(calcTimeSince(dateString: item.date))")
-                            .foregroundColor(calcTimeColor(dateString: item.date))
+                    }
+                    .onDelete { indexSet in
+                        deleteRecord(at: indexSet)
                     }
                 }
-                .onDelete { indexSet in
-                    deleteRecord(at: indexSet)
+                .navigationBarTitle("기록")
+                .onAppear {
+                    viewModel.fetchRecords() // 뷰가 나타날 때 데이터 로드
                 }
-            }
-            .navigationBarTitle("기록")
-            .onAppear {
-                viewModel.fetchRecords() // 뷰가 나타날 때 데이터 로드
+                Spacer()
+                GoogleAdView()
+                    .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
             }
         }
     }

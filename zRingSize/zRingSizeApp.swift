@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
+import AppTrackingTransparency
 
 @main
 struct zRingSizeApp: App {
@@ -13,10 +15,18 @@ struct zRingSizeApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+                    ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in })
+            }
         }
     }
     
     init() {
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in })
+        }
         Util.share.copyDatabase(dbName: "zRingSize.db")
     }
 }

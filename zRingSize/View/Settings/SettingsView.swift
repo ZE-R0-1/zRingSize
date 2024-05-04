@@ -6,23 +6,29 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 struct SettingsView: View {
     @AppStorage("vibrationEnabled") private var isVibrationEnabled = true
     
     var body: some View {
         NavigationView {
-            List {
-                Section(header: Text("진동")) {
-                    Toggle("진동 허용", isOn: $isVibrationEnabled)
+            VStack {
+                List {
+                    Section(header: Text("진동")) {
+                        Toggle("진동 허용", isOn: $isVibrationEnabled)
+                    }
+                    
+                    Section(header: Text("정보")) {
+                        NavigationLink("반지 기준 표", destination: SizeChartView())
+                    }
                 }
-                
-                Section(header: Text("정보")) {
-                    NavigationLink("반지 기준 표", destination: SizeChartView())
-                }
+                .listStyle(InsetGroupedListStyle())
+                .navigationBarTitle("설정")
+                Spacer()
+                GoogleAdView()
+                    .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
             }
-            .listStyle(InsetGroupedListStyle())
-            .navigationBarTitle("설정")
         }
     }
 }
