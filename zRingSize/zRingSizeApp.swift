@@ -17,13 +17,14 @@ struct zRingSizeApp: App {
             MainTabView()
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
                     ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in })
-            }
+                }
         }
     }
     
     init() {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
+        // DispatchQueue 이용
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in })
         }

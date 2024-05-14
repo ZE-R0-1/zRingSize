@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2291B2462BE5EE8B00920C29 /* GoogleAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291B2452BE5EE8B00920C29 /* GoogleAdView.swift */; };
-		2291B2482BE5F30700920C29 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 2291B2472BE5F30700920C29 /* GoogleMobileAds */; };
 		B03A6F272BE36992007FCF3C /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A6F262BE36992007FCF3C /* DeviceInfo.swift */; };
 		B03A6F2B2BE37923007FCF3C /* RingDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A6F2A2BE37923007FCF3C /* RingDisplayView.swift */; };
 		B03E6C4A2BD8D0BA0015AA9A /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E6C492BD8D0BA0015AA9A /* HistoryViewModel.swift */; };
@@ -40,6 +39,7 @@
 		B0E047F22BB145B10042E91B /* FingerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F12BB145B10042E91B /* FingerView.swift */; };
 		B0E047F42BB145BF0042E91B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F32BB145BF0042E91B /* HistoryView.swift */; };
 		B0E047F62BB145D00042E91B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F52BB145D00042E91B /* SettingsView.swift */; };
+		DA2077FC2BF3212C00C38A8C /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DA2077FB2BF3212C00C38A8C /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +103,7 @@
 		B0E047F12BB145B10042E91B /* FingerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerView.swift; sourceTree = "<group>"; };
 		B0E047F32BB145BF0042E91B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		B0E047F52BB145D00042E91B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DA2077FD2BF3457B00C38A8C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2291B2482BE5F30700920C29 /* GoogleMobileAds in Frameworks */,
+				DA2077FC2BF3212C00C38A8C /* GoogleMobileAds in Frameworks */,
 				B0CF52FB2BD882E100DA1841 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +201,7 @@
 		B0CF52F92BD882C300DA1841 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA2077FD2BF3457B00C38A8C /* CoreTelephony.framework */,
 				B0CF52FA2BD882C400DA1841 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
@@ -326,7 +328,7 @@
 			);
 			name = zRingSize;
 			packageProductDependencies = (
-				2291B2472BE5F30700920C29 /* GoogleMobileAds */,
+				DA2077FB2BF3212C00C38A8C /* GoogleMobileAds */,
 			);
 			productName = zRingSize;
 			productReference = B0E047B62BB117B00042E91B /* zRingSize.app */;
@@ -402,7 +404,7 @@
 			);
 			mainGroup = B0E047AD2BB117AF0042E91B;
 			packageReferences = (
-				2291B2442BE5E85500920C29 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				DA2077FA2BF31E5500C38A8C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = B0E047B72BB117B00042E91B /* Products */;
 			projectDirPath = "";
@@ -639,6 +641,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = zRingSize/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "반지측정하기";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -678,6 +681,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = zRingSize/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "반지측정하기";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -829,20 +833,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2291B2442BE5E85500920C29 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+		DA2077FA2BF31E5500C38A8C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 11.3.0;
+				minimumVersion = 11.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2291B2472BE5F30700920C29 /* GoogleMobileAds */ = {
+		DA2077FB2BF3212C00C38A8C /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2291B2442BE5E85500920C29 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			package = DA2077FA2BF31E5500C38A8C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
