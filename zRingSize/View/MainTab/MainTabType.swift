@@ -8,34 +8,23 @@
 import Foundation
 
 enum MainTabType: String, CaseIterable {
-    case ring
-    case finger
-    case history
-    case settings
+    case ring, finger, history, settings
     
     var title: String {
         switch self {
-        case .ring:
-            return "반지"
-        case .finger:
-            return "손가락"
-        case .history:
-            return "기록"
-        case .settings:
-            return "설정"
+        case .ring: return "반지"
+        case .finger: return "손가락"
+        case .history: return "기록"
+        case .settings: return "설정"
         }
     }
     
     var systemImageName: String {
         switch self {
-        case .ring:
-            return "ring.circle"
-        case .finger:
-            return "hand.point.up"
-        case .history:
-            return "list.bullet.circle"
-        case .settings:
-            return "gearshape"
+        case .ring: return "ring.circle"
+        case .finger: return "hand.point.up"
+        case .history: return "list.bullet.circle"
+        case .settings: return "gearshape"
         }
     }
 }
