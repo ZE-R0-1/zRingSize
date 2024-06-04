@@ -40,6 +40,12 @@
 		B0E047F42BB145BF0042E91B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F32BB145BF0042E91B /* HistoryView.swift */; };
 		B0E047F62BB145D00042E91B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F52BB145D00042E91B /* SettingsView.swift */; };
 		DA2077FC2BF3212C00C38A8C /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DA2077FB2BF3212C00C38A8C /* GoogleMobileAds */; };
+		DAAC46512C0EE30700C2649A /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAAC464D2C0EE30700C2649A /* Inter-Regular.ttf */; };
+		DAAC46522C0EE30700C2649A /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAAC464E2C0EE30700C2649A /* Inter-SemiBold.ttf */; };
+		DAAC46532C0EE30700C2649A /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAAC464F2C0EE30700C2649A /* Poppins-Bold.ttf */; };
+		DAAC46562C0EE47700C2649A /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC46552C0EE47700C2649A /* CustomFont.swift */; };
+		DAAC46582C0EE59C00C2649A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC46572C0EE59C00C2649A /* TabBar.swift */; };
+		DAAC465C2C0EF97400C2649A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC465B2C0EF97400C2649A /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +110,12 @@
 		B0E047F32BB145BF0042E91B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		B0E047F52BB145D00042E91B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DA2077FD2BF3457B00C38A8C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DAAC464D2C0EE30700C2649A /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		DAAC464E2C0EE30700C2649A /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		DAAC464F2C0EE30700C2649A /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		DAAC46552C0EE47700C2649A /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		DAAC46572C0EE59C00C2649A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		DAAC465B2C0EF97400C2649A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +157,8 @@
 		B036A16A2BB281EA00546228 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DAAC465B2C0EF97400C2649A /* ContentView.swift */,
+				DAAC46572C0EE59C00C2649A /* TabBar.swift */,
 				B0DD229D2BB3ADB800B66190 /* MainTab */,
 				B0DD22A02BB3D64E00B66190 /* Ring */,
 				B0DD22A82BB3E8F800B66190 /* Finger */,
@@ -281,6 +295,8 @@
 				B036A16A2BB281EA00546228 /* View */,
 				B036A1842BB2A8E500546228 /* Resource */,
 				B0DCA1592BBE7E210096E460 /* Formatter */,
+				DAAC46542C0EE42000C2649A /* Styles */,
+				DAAC46502C0EE30700C2649A /* Fonts */,
 				B0E047BF2BB117B10042E91B /* Preview Content */,
 			);
 			path = zRingSize;
@@ -309,6 +325,24 @@
 				B0E047DB2BB117B20042E91B /* zRingSizeUITestsLaunchTests.swift */,
 			);
 			path = zRingSizeUITests;
+			sourceTree = "<group>";
+		};
+		DAAC46502C0EE30700C2649A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC464D2C0EE30700C2649A /* Inter-Regular.ttf */,
+				DAAC464E2C0EE30700C2649A /* Inter-SemiBold.ttf */,
+				DAAC464F2C0EE30700C2649A /* Poppins-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DAAC46542C0EE42000C2649A /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC46552C0EE47700C2649A /* CustomFont.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,7 +457,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E047C12BB117B10042E91B /* Preview Assets.xcassets in Resources */,
+				DAAC46532C0EE30700C2649A /* Poppins-Bold.ttf in Resources */,
 				B056BB4B2BD8C7CD0066AE48 /* zRingSize.db in Resources */,
+				DAAC46512C0EE30700C2649A /* Inter-Regular.ttf in Resources */,
+				DAAC46522C0EE30700C2649A /* Inter-SemiBold.ttf in Resources */,
 				B0E047BE2BB117B10042E91B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,9 +486,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAC46582C0EE59C00C2649A /* TabBar.swift in Sources */,
 				B0E047F22BB145B10042E91B /* FingerView.swift in Sources */,
+				DAAC465C2C0EF97400C2649A /* ContentView.swift in Sources */,
 				B03A6F2B2BE37923007FCF3C /* RingDisplayView.swift in Sources */,
 				B0A28D662BBE269200BAA025 /* FingerDisplayView.swift in Sources */,
+				DAAC46562C0EE47700C2649A /* CustomFont.swift in Sources */,
 				B0CF52F52BD8829F00DA1841 /* FMDatabase.m in Sources */,
 				B0CF52F82BD8829F00DA1841 /* FMDatabasePool.m in Sources */,
 				B03E6C4A2BD8D0BA0015AA9A /* HistoryViewModel.swift in Sources */,
@@ -642,6 +682,7 @@
 				INFOPLIST_FILE = zRingSize/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "반지측정하기";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "맞춤형 광고 제공 허용";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -651,7 +692,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -682,6 +723,7 @@
 				INFOPLIST_FILE = zRingSize/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "반지측정하기";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "맞춤형 광고 제공 허용";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -691,7 +733,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

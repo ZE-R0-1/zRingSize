@@ -23,8 +23,8 @@ struct zRingSizeApp: App {
     }
     
     init() {
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-//        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "689153a9052494c1c60c1f1defcdc4fe" ]
+//        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "689153a9052494c1c60c1f1defcdc4fe" ]
         
         // DispatchQueue 이용
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
