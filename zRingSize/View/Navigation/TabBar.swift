@@ -13,7 +13,7 @@ struct TabBar: View {
     var body: some View {
         VStack {
             Spacer()
-            HStack(spacing: 20) {
+            HStack(spacing: 30) {
                 content
             }
             .padding(12)
@@ -40,7 +40,7 @@ struct TabBar: View {
                     Image(systemName: item.icon)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 30, height: 54)
+                        .frame(width: 16, height: 28.8)
                         .foregroundColor(.white)
                         .opacity(selectedTab == item.tab ? 1 : 0.5)
                     
@@ -53,10 +53,9 @@ struct TabBar: View {
                     VStack {
                         RoundedRectangle(cornerRadius: 2)
                             .fill(Color.accentColor)
-                            .frame(width: selectedTab == item.tab ? 30 : 0, height: 6)
-                            .offset(y: -6)
+                            .frame(width: selectedTab == item.tab ? 18 : 0, height: 3.2)
+                            .offset(y: -3.2)
                             .opacity(selectedTab == item.tab ? 1 : 0)
-                            .padding(.top, 3)
                         Spacer()
                     }
                 )
@@ -75,6 +74,7 @@ struct TabItem: Identifiable {
     var name: String
     var tab: Tab
 }
+
 var tabItems = [
     TabItem(icon: "ring.circle", name: "반지", tab: .ring),
     TabItem(icon: "hand.point.up", name: "손가락", tab: .finger),
@@ -82,6 +82,7 @@ var tabItems = [
     TabItem(icon: "map", name: "지도", tab: .map),
     TabItem(icon: "gearshape", name: "설정", tab: .setting)
 ]
+
 enum Tab: String {
     case ring
     case finger

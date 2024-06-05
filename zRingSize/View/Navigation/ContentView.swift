@@ -14,15 +14,15 @@ struct ContentView: View {
         ZStack {
             switch selectedTab {
             case .ring:
-                Text("Ring")
+                RingView()
             case .finger:
-                Text("Finger")
+                FingerView()
             case .map:
                 Text("Map")
             case .history:
-                Text("History")
+                HistoryView()
             case .setting:
-                Text("Setting")
+                SettingsView()
             }
             TabBar()
         }
