@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 struct ContentView: View {
     @AppStorage("selectedTab") var selectedTab: Tab = .ring
     
     var body: some View {
-        ZStack {
+        VStack(spacing: 20) {
             switch selectedTab {
             case .ring:
                 RingView()
@@ -24,6 +25,8 @@ struct ContentView: View {
             case .setting:
                 SettingsView()
             }
+            GoogleAdView()
+                .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
             TabBar()
         }
     }

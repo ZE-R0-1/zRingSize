@@ -6,15 +6,12 @@
 //
 
 import SwiftUI
-import UIKit
-import GoogleMobileAds
 
 struct FingerView: View {
     @StateObject var viewModel = FingerViewModel()
     
     @State private var showingAlert = false
     @State private var title = ""
-    
     @AppStorage("vibrationEnabled") private var isVibrationEnabled = true
     
     private var onecentimeter: CGFloat {
@@ -45,8 +42,6 @@ struct FingerView: View {
                     FingerDisplayView(fingerWidth: viewModel.fingerWidth * onecentimeter)
                         .frame(width: min(geometry.size.width, geometry.size.height) * 0.8, height: min(geometry.size.width, geometry.size.height) * 0.8)
                     Spacer()
-                    GoogleAdView()
-                        .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
                 }
                 .navigationBarTitle("손가락", displayMode: .inline)
                 .navigationBarItems(

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import GoogleMobileAds
 
 struct SettingsView: View {
     @AppStorage("vibrationEnabled") private var isVibrationEnabled = true
@@ -26,8 +25,6 @@ struct SettingsView: View {
                 .listStyle(InsetGroupedListStyle())
                 .navigationBarTitle("설정")
                 Spacer()
-                GoogleAdView()
-                    .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
             }
         }
     }

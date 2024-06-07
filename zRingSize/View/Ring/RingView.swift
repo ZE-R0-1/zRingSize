@@ -6,15 +6,12 @@
 //
 
 import SwiftUI
-import UIKit
-import GoogleMobileAds
 
 struct RingView: View {
     @StateObject var viewModel = RingViewModel()
     
     @State private var showingAlert = false
     @State private var title = ""
-    
     @AppStorage("vibrationEnabled") private var isVibrationEnabled = true
     
     private var onecentimeter: CGFloat {
@@ -46,8 +43,6 @@ struct RingView: View {
                     
                     Text("반지 지름: \(String(format: "%.1f", viewModel.ringDiameter * 10))mm")
                     Spacer()
-                    GoogleAdView()
-                        .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
                 }
                 .navigationBarTitle("반지", displayMode: .inline)
                 .navigationBarItems(

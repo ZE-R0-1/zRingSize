@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import GoogleMobileAds
 
 struct HistoryView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -37,8 +36,6 @@ struct HistoryView: View {
                     viewModel.fetchRecords() // 뷰가 나타날 때 데이터 로드
                 }
                 Spacer()
-                GoogleAdView()
-                    .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
             }
         }
     }

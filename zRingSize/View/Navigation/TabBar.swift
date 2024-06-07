@@ -12,7 +12,6 @@ struct TabBar: View {
 
     var body: some View {
         VStack {
-            Spacer()
             HStack(spacing: 30) {
                 content
             }
