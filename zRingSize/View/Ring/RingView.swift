@@ -31,7 +31,11 @@ struct RingView: View {
                 VStack(spacing: 20) {
                     Spacer()
                     RingDisplayView(viewModel: viewModel, ringDiameter: viewModel.ringDiameter * onecentimeter)
-                        .frame(width: min(geometry.size.width, geometry.size.height) * 0.8, height: min(geometry.size.width, geometry.size.height) * 0.8)
+                        .frame(width: min(geometry.size.width, geometry.size.height) * 0.6, height: min(geometry.size.width, geometry.size.height) * 0.6)
+                        .background(.linearGradient(colors: [Color(hex: "FFFBDA"), Color(hex: "FFFBDA").opacity(0.5)], startPoint: .topLeading, endPoint: .bottomLeading))
+                        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                        .shadow(color: Color(hex: "7850F0").opacity(0.3), radius: 8, x: 0, y: 12)
+                        .shadow(color: Color(hex: "7850F0").opacity(0.3), radius: 2, x: 0, y: 1)
                     Spacer()
                     Slider(value: $viewModel.ringDiameter, in: 1.31...2.25, step: 0.01)
                         .padding([.leading, .trailing], 70)

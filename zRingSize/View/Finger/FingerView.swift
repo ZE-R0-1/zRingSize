@@ -40,7 +40,11 @@ struct FingerView: View {
                             }
                         }
                     FingerDisplayView(fingerWidth: viewModel.fingerWidth * onecentimeter)
-                        .frame(width: min(geometry.size.width, geometry.size.height) * 0.8, height: min(geometry.size.width, geometry.size.height) * 0.8)
+                        .frame(width: min(geometry.size.width, geometry.size.height) * 0.6, height: min(geometry.size.width, geometry.size.height) * 0.9)
+                        .background(.linearGradient(colors: [Color(hex: "FFFBDA"), Color(hex: "FFFBDA").opacity(0.5)], startPoint: .topLeading, endPoint: .bottomLeading))
+                        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                        .shadow(color: Color(hex: "7850F0").opacity(0.3), radius: 8, x: 0, y: 12)
+                        .shadow(color: Color(hex: "7850F0").opacity(0.3), radius: 2, x: 0, y: 1)
                     Spacer()
                 }
                 .navigationBarTitle("손가락", displayMode: .inline)
