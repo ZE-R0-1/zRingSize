@@ -268,11 +268,11 @@
 			isa = PBXGroup;
 			children = (
 				B0E047B92BB117B00042E91B /* zRingSizeApp.swift */,
-				B0CF52FC2BD883B400DA1841 /* Helper */,
 				B036A16A2BB281EA00546228 /* View */,
 				B036A1842BB2A8E500546228 /* Resource */,
 				DAAC46542C0EE42000C2649A /* Styles */,
 				DAAC46502C0EE30700C2649A /* Fonts */,
+				B0CF52FC2BD883B400DA1841 /* Helper */,
 				B0E047BF2BB117B10042E91B /* Preview Content */,
 			);
 			path = zRingSize;
@@ -676,7 +676,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -717,7 +717,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
