@@ -79,14 +79,12 @@ var tabItems = [
     TabItem(icon: "ring.circle", name: "반지", tab: .ring),
     TabItem(icon: "hand.point.up", name: "손가락", tab: .finger),
     TabItem(icon: "list.bullet.circle", name: "기록", tab: .history),
-//    TabItem(icon: "map", name: "지도", tab: .map),
     TabItem(icon: "gearshape", name: "설정", tab: .setting)
 ]
 
 enum Tab: String {
     case ring
     case finger
-//    case map
     case history
     case setting
 }

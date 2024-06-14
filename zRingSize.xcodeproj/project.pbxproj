@@ -39,6 +39,8 @@
 		B0E047F62BB145D00042E91B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F52BB145D00042E91B /* SettingsView.swift */; };
 		DA0A0C6C2C0FEC1500EC7270 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A0C692C0FEC1500EC7270 /* ContentView.swift */; };
 		DA0A0C6D2C0FEC1500EC7270 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A0C6A2C0FEC1500EC7270 /* TabBar.swift */; };
+		DA19FF142C1BD41800789892 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19FF132C1BD41800789892 /* WebView.swift */; };
+		DA19FF182C1C046700789892 /* EmailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19FF172C1C046700789892 /* EmailSender.swift */; };
 		DA2077FC2BF3212C00C38A8C /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DA2077FB2BF3212C00C38A8C /* GoogleMobileAds */; };
 		DAAC46512C0EE30700C2649A /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAAC464D2C0EE30700C2649A /* Inter-Regular.ttf */; };
 		DAAC46522C0EE30700C2649A /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAAC464E2C0EE30700C2649A /* Inter-SemiBold.ttf */; };
@@ -107,6 +109,8 @@
 		B0E047F52BB145D00042E91B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DA0A0C692C0FEC1500EC7270 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA0A0C6A2C0FEC1500EC7270 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		DA19FF132C1BD41800789892 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		DA19FF172C1C046700789892 /* EmailSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSender.swift; sourceTree = "<group>"; };
 		DA2077FD2BF3457B00C38A8C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DAAC464D2C0EE30700C2649A /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		DAAC464E2C0EE30700C2649A /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				B0A1CD112BBFCCE900C85520 /* HistoryView */,
 				B02E51582BB5533700570A10 /* Settings */,
 				2291B2452BE5EE8B00920C29 /* GoogleAdView.swift */,
+				DA19FF132C1BD41800789892 /* WebView.swift */,
+				DA19FF172C1C046700789892 /* EmailSender.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 				B03E6C4A2BD8D0BA0015AA9A /* HistoryViewModel.swift in Sources */,
 				B0E047F02BB1459F0042E91B /* RingView.swift in Sources */,
 				B03A6F272BE36992007FCF3C /* DeviceInfo.swift in Sources */,
+				DA19FF182C1C046700789892 /* EmailSender.swift in Sources */,
 				B0DCA15B2BBE7E3B0096E460 /* Extensions.swift in Sources */,
 				B0CF52FE2BD887D500DA1841 /* Util.swift in Sources */,
 				B0A1CD102BBFBBEC00C85520 /* SizeChartView.swift in Sources */,
@@ -496,6 +503,7 @@
 				B0E047BA2BB117B00042E91B /* zRingSizeApp.swift in Sources */,
 				2291B2462BE5EE8B00920C29 /* GoogleAdView.swift in Sources */,
 				B0E047F42BB145BF0042E91B /* HistoryView.swift in Sources */,
+				DA19FF142C1BD41800789892 /* WebView.swift in Sources */,
 				B0CF52F72BD8829F00DA1841 /* FMDatabaseAdditions.m in Sources */,
 				DA0A0C6D2C0FEC1500EC7270 /* TabBar.swift in Sources */,
 			);

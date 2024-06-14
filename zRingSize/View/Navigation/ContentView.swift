@@ -18,8 +18,6 @@ struct ContentView: View {
                 RingView()
             case .finger:
                 FingerView()
-//            case .map:
-//                Text("Map")
             case .history:
                 HistoryView()
             case .setting:
