@@ -24,7 +24,6 @@
 		B0CF52FE2BD887D500DA1841 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF52FD2BD887D500DA1841 /* Util.swift */; };
 		B0CF53032BD88B9100DA1841 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF53022BD88B9100DA1841 /* ModelManager.swift */; };
 		B0CF53052BD88D1B00DA1841 /* SizeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF53042BD88D1B00DA1841 /* SizeRecord.swift */; };
-		B0DCA15B2BBE7E3B0096E460 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCA15A2BBE7E3B0096E460 /* Extensions.swift */; };
 		B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A62BB3D82900B66190 /* RingViewModel.swift */; };
 		B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A92BB3E9CD00B66190 /* FingerViewModel.swift */; };
 		B0E047BA2BB117B00042E91B /* zRingSizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047B92BB117B00042E91B /* zRingSizeApp.swift */; };
@@ -37,11 +36,19 @@
 		B0E047F22BB145B10042E91B /* FingerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F12BB145B10042E91B /* FingerView.swift */; };
 		B0E047F42BB145BF0042E91B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F32BB145BF0042E91B /* HistoryView.swift */; };
 		B0E047F62BB145D00042E91B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F52BB145D00042E91B /* SettingsView.swift */; };
-		DA0A0C6C2C0FEC1500EC7270 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A0C692C0FEC1500EC7270 /* ContentView.swift */; };
-		DA0A0C6D2C0FEC1500EC7270 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A0C6A2C0FEC1500EC7270 /* TabBar.swift */; };
 		DA19FF142C1BD41800789892 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19FF132C1BD41800789892 /* WebView.swift */; };
 		DA19FF182C1C046700789892 /* EmailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19FF172C1C046700789892 /* EmailSender.swift */; };
 		DA2077FC2BF3212C00C38A8C /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DA2077FB2BF3212C00C38A8C /* GoogleMobileAds */; };
+		DA2A67C52C2932D40048AED5 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67C42C2932D40048AED5 /* Color+Extensions.swift */; };
+		DA2A67C72C2933120048AED5 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67C62C2933120048AED5 /* Date+Extensions.swift */; };
+		DA2A67C92C2933300048AED5 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67C82C2933300048AED5 /* View+Extensions.swift */; };
+		DA2A67D52C293E220048AED5 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67D42C293E220048AED5 /* Path.swift */; };
+		DA2A67D82C293E510048AED5 /* PathType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67D72C293E510048AED5 /* PathType.swift */; };
+		DA2A67DD2C293FCD0048AED5 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67DC2C293FCD0048AED5 /* Tab.swift */; };
+		DA2A67E32C2941820048AED5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67E22C2941820048AED5 /* HomeView.swift */; };
+		DA2A67E52C2941E30048AED5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67E42C2941E30048AED5 /* HomeViewModel.swift */; };
+		DA2A67E72C2947260048AED5 /* zRingSize-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = B0CF52E82BD8829D00DA1841 /* zRingSize-Bridging-Header.h */; };
+		DA2A67EC2C295AF50048AED5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67EB2C295AF50048AED5 /* SettingView.swift */; };
 		DAAC46512C0EE30700C2649A /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAAC464D2C0EE30700C2649A /* Inter-Regular.ttf */; };
 		DAAC46522C0EE30700C2649A /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAAC464E2C0EE30700C2649A /* Inter-SemiBold.ttf */; };
 		DAAC46532C0EE30700C2649A /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAAC464F2C0EE30700C2649A /* Poppins-Bold.ttf */; };
@@ -91,7 +98,6 @@
 		B0CF52FD2BD887D500DA1841 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		B0CF53022BD88B9100DA1841 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		B0CF53042BD88D1B00DA1841 /* SizeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeRecord.swift; sourceTree = "<group>"; };
-		B0DCA15A2BBE7E3B0096E460 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B0DD22A62BB3D82900B66190 /* RingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewModel.swift; sourceTree = "<group>"; };
 		B0DD22A92BB3E9CD00B66190 /* FingerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerViewModel.swift; sourceTree = "<group>"; };
 		B0E047B62BB117B00042E91B /* zRingSize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zRingSize.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,11 +113,18 @@
 		B0E047F12BB145B10042E91B /* FingerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerView.swift; sourceTree = "<group>"; };
 		B0E047F32BB145BF0042E91B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		B0E047F52BB145D00042E91B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		DA0A0C692C0FEC1500EC7270 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		DA0A0C6A2C0FEC1500EC7270 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DA19FF132C1BD41800789892 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		DA19FF172C1C046700789892 /* EmailSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSender.swift; sourceTree = "<group>"; };
 		DA2077FD2BF3457B00C38A8C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DA2A67C42C2932D40048AED5 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		DA2A67C62C2933120048AED5 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		DA2A67C82C2933300048AED5 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		DA2A67D42C293E220048AED5 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		DA2A67D72C293E510048AED5 /* PathType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathType.swift; sourceTree = "<group>"; };
+		DA2A67DC2C293FCD0048AED5 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		DA2A67E22C2941820048AED5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DA2A67E42C2941E30048AED5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DA2A67EB2C295AF50048AED5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		DAAC464D2C0EE30700C2649A /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		DAAC464E2C0EE30700C2649A /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		DAAC464F2C0EE30700C2649A /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -148,25 +161,26 @@
 		B02E51582BB5533700570A10 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				B0E047F52BB145D00042E91B /* SettingsView.swift */,
+				DA2A67EB2C295AF50048AED5 /* SettingView.swift */,
 				B0A1CD0F2BBFBBEC00C85520 /* SizeChartView.swift */,
+				DA19FF172C1C046700789892 /* EmailSender.swift */,
+				DA19FF132C1BD41800789892 /* WebView.swift */,
+				B0E047F52BB145D00042E91B /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		B036A16A2BB281EA00546228 /* View */ = {
+		B036A16A2BB281EA00546228 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				DA0A0C6B2C0FEC1500EC7270 /* Navigation */,
+				DA2A67E22C2941820048AED5 /* HomeView.swift */,
+				DA2A67E42C2941E30048AED5 /* HomeViewModel.swift */,
 				B0DD22A02BB3D64E00B66190 /* Ring */,
 				B0DD22A82BB3E8F800B66190 /* Finger */,
 				B0A1CD112BBFCCE900C85520 /* HistoryView */,
 				B02E51582BB5533700570A10 /* Settings */,
-				2291B2452BE5EE8B00920C29 /* GoogleAdView.swift */,
-				DA19FF132C1BD41800789892 /* WebView.swift */,
-				DA19FF172C1C046700789892 /* EmailSender.swift */,
 			);
-			path = View;
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		B036A1842BB2A8E500546228 /* Resource */ = {
@@ -175,11 +189,8 @@
 				B056BB4A2BD8C7CD0066AE48 /* zRingSize.db */,
 				B036A1752BB284B300546228 /* Info.plist */,
 				B0E047BD2BB117B10042E91B /* Assets.xcassets */,
-				B0CF52FD2BD887D500DA1841 /* Util.swift */,
-				B0A28D5F2BBD12BE00BAA025 /* SizeModel.swift */,
-				B0CF53022BD88B9100DA1841 /* ModelManager.swift */,
-				B0CF53042BD88D1B00DA1841 /* SizeRecord.swift */,
-				B03A6F262BE36992007FCF3C /* DeviceInfo.swift */,
+				DAAC46502C0EE30700C2649A /* Fonts */,
+				B0CF52E72BD8813800DA1841 /* FMDB */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -219,14 +230,6 @@
 				B0CF52FA2BD882C400DA1841 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B0CF52FC2BD883B400DA1841 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				B0CF52E72BD8813800DA1841 /* FMDB */,
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		B0DD22A02BB3D64E00B66190 /* Ring */ = {
@@ -273,12 +276,12 @@
 		B0E047B82BB117B00042E91B /* zRingSize */ = {
 			isa = PBXGroup;
 			children = (
-				B0E047B92BB117B00042E91B /* zRingSizeApp.swift */,
-				B036A16A2BB281EA00546228 /* View */,
+				DA2A67BF2C2931260048AED5 /* App */,
+				DA2A67C02C2931330048AED5 /* Component */,
+				DA2A67C22C2931550048AED5 /* Core */,
+				B036A16A2BB281EA00546228 /* Feature */,
+				DA2A67D32C293DF70048AED5 /* Model */,
 				B036A1842BB2A8E500546228 /* Resource */,
-				DAAC46542C0EE42000C2649A /* Styles */,
-				DAAC46502C0EE30700C2649A /* Fonts */,
-				B0CF52FC2BD883B400DA1841 /* Helper */,
 				B0E047BF2BB117B10042E91B /* Preview Content */,
 			);
 			path = zRingSize;
@@ -309,13 +312,110 @@
 			path = zRingSizeUITests;
 			sourceTree = "<group>";
 		};
-		DA0A0C6B2C0FEC1500EC7270 /* Navigation */ = {
+		DA2A67BF2C2931260048AED5 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				DA0A0C692C0FEC1500EC7270 /* ContentView.swift */,
-				DA0A0C6A2C0FEC1500EC7270 /* TabBar.swift */,
+				B0E047B92BB117B00042E91B /* zRingSizeApp.swift */,
 			);
-			path = Navigation;
+			path = App;
+			sourceTree = "<group>";
+		};
+		DA2A67C02C2931330048AED5 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				DA2A67C12C29313F0048AED5 /* AdView */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		DA2A67C12C29313F0048AED5 /* AdView */ = {
+			isa = PBXGroup;
+			children = (
+				2291B2452BE5EE8B00920C29 /* GoogleAdView.swift */,
+			);
+			path = AdView;
+			sourceTree = "<group>";
+		};
+		DA2A67C22C2931550048AED5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DA2A67CF2C293BCD0048AED5 /* Util */,
+				DA2A67CE2C293BBA0048AED5 /* Database */,
+				DA2A67CC2C2934CC0048AED5 /* Font */,
+				DA2A67C32C2932C10048AED5 /* Extension */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DA2A67C32C2932C10048AED5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA2A67C42C2932D40048AED5 /* Color+Extensions.swift */,
+				DA2A67C62C2933120048AED5 /* Date+Extensions.swift */,
+				DA2A67C82C2933300048AED5 /* View+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DA2A67CC2C2934CC0048AED5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC46552C0EE47700C2649A /* CustomFont.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		DA2A67CE2C293BBA0048AED5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				B0CF53022BD88B9100DA1841 /* ModelManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		DA2A67CF2C293BCD0048AED5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B0CF52FD2BD887D500DA1841 /* Util.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		DA2A67D12C293C510048AED5 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				B03A6F262BE36992007FCF3C /* DeviceInfo.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		DA2A67D22C293C710048AED5 /* Size */ = {
+			isa = PBXGroup;
+			children = (
+				B0A28D5F2BBD12BE00BAA025 /* SizeModel.swift */,
+				B0CF53042BD88D1B00DA1841 /* SizeRecord.swift */,
+			);
+			path = Size;
+			sourceTree = "<group>";
+		};
+		DA2A67D32C293DF70048AED5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA2A67D92C293FB10048AED5 /* Home */,
+				DA2A67D22C293C710048AED5 /* Size */,
+				DA2A67D12C293C510048AED5 /* Device */,
+				DA2A67D42C293E220048AED5 /* Path.swift */,
+				DA2A67D72C293E510048AED5 /* PathType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA2A67D92C293FB10048AED5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DA2A67DC2C293FCD0048AED5 /* Tab.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		DAAC46502C0EE30700C2649A /* Fonts */ = {
@@ -326,15 +426,6 @@
 				DAAC464F2C0EE30700C2649A /* Poppins-Bold.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		DAAC46542C0EE42000C2649A /* Styles */ = {
-			isa = PBXGroup;
-			children = (
-				B0DCA15A2BBE7E3B0096E460 /* Extensions.swift */,
-				DAAC46552C0EE47700C2649A /* CustomFont.swift */,
-			);
-			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,20 +569,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2A67E72C2947260048AED5 /* zRingSize-Bridging-Header.h in Sources */,
 				B0E047F22BB145B10042E91B /* FingerView.swift in Sources */,
+				DA2A67C92C2933300048AED5 /* View+Extensions.swift in Sources */,
 				B03A6F2B2BE37923007FCF3C /* RingDisplayView.swift in Sources */,
 				B0A28D662BBE269200BAA025 /* FingerDisplayView.swift in Sources */,
 				DAAC46562C0EE47700C2649A /* CustomFont.swift in Sources */,
+				DA2A67E32C2941820048AED5 /* HomeView.swift in Sources */,
 				B0CF52F52BD8829F00DA1841 /* FMDatabase.m in Sources */,
 				B0CF52F82BD8829F00DA1841 /* FMDatabasePool.m in Sources */,
 				B03E6C4A2BD8D0BA0015AA9A /* HistoryViewModel.swift in Sources */,
 				B0E047F02BB1459F0042E91B /* RingView.swift in Sources */,
 				B03A6F272BE36992007FCF3C /* DeviceInfo.swift in Sources */,
 				DA19FF182C1C046700789892 /* EmailSender.swift in Sources */,
-				B0DCA15B2BBE7E3B0096E460 /* Extensions.swift in Sources */,
 				B0CF52FE2BD887D500DA1841 /* Util.swift in Sources */,
 				B0A1CD102BBFBBEC00C85520 /* SizeChartView.swift in Sources */,
-				DA0A0C6C2C0FEC1500EC7270 /* ContentView.swift in Sources */,
 				B0CF53052BD88D1B00DA1841 /* SizeRecord.swift in Sources */,
 				B0CF52F62BD8829F00DA1841 /* FMDatabaseQueue.m in Sources */,
 				B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */,
@@ -500,12 +592,18 @@
 				B0CF52F42BD8829F00DA1841 /* FMResultSet.m in Sources */,
 				B0E047F62BB145D00042E91B /* SettingsView.swift in Sources */,
 				B0CF53032BD88B9100DA1841 /* ModelManager.swift in Sources */,
+				DA2A67E52C2941E30048AED5 /* HomeViewModel.swift in Sources */,
 				B0E047BA2BB117B00042E91B /* zRingSizeApp.swift in Sources */,
+				DA2A67C72C2933120048AED5 /* Date+Extensions.swift in Sources */,
+				DA2A67D82C293E510048AED5 /* PathType.swift in Sources */,
 				2291B2462BE5EE8B00920C29 /* GoogleAdView.swift in Sources */,
 				B0E047F42BB145BF0042E91B /* HistoryView.swift in Sources */,
+				DA2A67DD2C293FCD0048AED5 /* Tab.swift in Sources */,
 				DA19FF142C1BD41800789892 /* WebView.swift in Sources */,
+				DA2A67EC2C295AF50048AED5 /* SettingView.swift in Sources */,
+				DA2A67C52C2932D40048AED5 /* Color+Extensions.swift in Sources */,
 				B0CF52F72BD8829F00DA1841 /* FMDatabaseAdditions.m in Sources */,
-				DA0A0C6D2C0FEC1500EC7270 /* TabBar.swift in Sources */,
+				DA2A67D52C293E220048AED5 /* Path.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,7 +782,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.3;
+				MARKETING_VERSION = 2.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -692,7 +790,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "zRingSize/Helper/FMDB/zRingSize-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "zRingSize/Resource/FMDB/zRingSize-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -725,7 +823,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.3;
+				MARKETING_VERSION = 2.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -733,7 +831,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "zRingSize/Helper/FMDB/zRingSize-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "zRingSize/Resource/FMDB/zRingSize-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

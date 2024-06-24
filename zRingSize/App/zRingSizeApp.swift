@@ -15,7 +15,7 @@ struct zRingSizeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
                     ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in })
                 }

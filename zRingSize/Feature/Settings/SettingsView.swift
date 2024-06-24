@@ -59,10 +59,7 @@ struct SettingsView: View {
     }
 }
 
-enum Page: String {
-    case Help = "https://velog.io/@ze-r0/%EB%B0%98%EC%A7%80%EC%B8%A1%EC%A0%95%ED%95%98%EA%B8%B0"
-    case Policy = "https://velog.io/@ze-r0/iOS-%EC%95%B1-%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4-%EC%B2%98%EB%A6%AC%EB%B0%A9%EC%B9%A8"
-}
+
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
