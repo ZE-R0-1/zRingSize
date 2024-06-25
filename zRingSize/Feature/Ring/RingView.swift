@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import GoogleMobileAds
 
 struct RingView: View {
     @StateObject var viewModel = RingViewModel()
@@ -47,8 +46,6 @@ struct RingView: View {
                         }
                     
                     Text("반지 지름: \(String(format: "%.1f", viewModel.ringDiameter * 10))mm")
-                    GoogleAdView()
-                        .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
                     Spacer()
                 }
                 .navigationBarTitle("반지", displayMode: .inline)

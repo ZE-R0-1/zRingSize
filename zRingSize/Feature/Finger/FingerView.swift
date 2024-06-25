@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import GoogleMobileAds
 
 struct FingerView: View {
     @StateObject var viewModel = FingerViewModel()
@@ -46,8 +45,6 @@ struct FingerView: View {
                         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
                         .shadow(color: Color(hex: "7850F0").opacity(0.3), radius: 8, x: 0, y: 12)
                         .shadow(color: Color(hex: "7850F0").opacity(0.3), radius: 2, x: 0, y: 1)
-                    GoogleAdView()
-                        .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
                     Spacer()
                 }
                 .navigationBarTitle("손가락", displayMode: .inline)

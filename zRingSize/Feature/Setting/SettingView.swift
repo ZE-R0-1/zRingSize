@@ -5,72 +5,92 @@
 //
 
 import SwiftUI
-import GoogleMobileAds
 import MessageUI
 
 struct SettingView: View {
     @EnvironmentObject private var homeViewModel: HomeViewModel
-
+    @State private var showingEmailSheet = false
+    
     var body: some View {
         NavigationView {
             VStack {
                 TitleView()
                 Spacer()
                     .frame(height: 35)
-                TotalTabMoveView()
+                TotalView(showingEmailSheet: $showingEmailSheet)
                 Spacer()
             }
             .navigationBarHidden(true)
+            .sheet(isPresented: $showingEmailSheet) {
+                if MFMailComposeViewController.canSendMail() {
+                    EmailSender()
+                } else {
+                    Text("이메일을 보낼 수 없습니다. 이메일 계정을 확인해주세요.")
+                }
+            }
         }
     }
+}
 
-    private struct TotalTabMoveView: View {
-        @EnvironmentObject private var homeViewModel: HomeViewModel
-        @AppStorage("vibrationEnabled") private var isVibrationEnabled = true
-
-        var body: some View {
-            VStack {
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(height: 1)
-
-                ToggleView(
-                    title: "진동 허용",
-                    isOn: $isVibrationEnabled
-                )
-
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(height: 1)
-
-                LinkMoveView(
-                    title: "도움말",
-                    destination: WebView(url: Page.Help.rawValue)
-                        .navigationTitle("도움말")
-                )
-
-                LinkMoveView(
-                    title: "개인정보 정책",
-                    destination: WebView(url: Page.Policy.rawValue)
-                        .navigationTitle("개인정보 정책")
-                )
-
-                LinkMoveView(
-                    title: "반지 기준 표",
-                    destination: SizeChartView()
-                        .navigationTitle("반지 기준 표")
-                )
-                
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(height: 1)
-
-                Text("문의사항 보내기")
-
-                Rectangle()
-                    .fill(Color.gray)
-                    .frame(height: 1)
+// MARK: - 전체 뷰
+private struct TotalView: View {
+    @EnvironmentObject private var homeViewModel: HomeViewModel
+    @AppStorage("vibrationEnabled") private var isVibrationEnabled = true
+    @Binding var showingEmailSheet: Bool
+    
+    var body: some View {
+        VStack {
+            Rectangle()
+                .fill(Color.gray)
+                .frame(height: 1)
+            
+            ToggleView(
+                title: "진동 허용",
+                isOn: $isVibrationEnabled
+            )
+            
+            Rectangle()
+                .fill(Color.gray)
+                .frame(height: 1)
+            
+            LinkMoveView(
+                title: "도움말",
+                destination: WebView(url: Page.Help.rawValue)
+                    .navigationTitle("도움말")
+            )
+            
+            LinkMoveView(
+                title: "개인정보 정책",
+                destination: WebView(url: Page.Policy.rawValue)
+                    .navigationTitle("개인정보 정책")
+            )
+            
+            LinkMoveView(
+                title: "반지 기준 표",
+                destination: SizeChartView()
+                    .navigationTitle("반지 기준 표")
+            )
+            
+            Rectangle()
+                .fill(Color.gray)
+                .frame(height: 1)
+            
+            Button(action: {
+                showingEmailSheet = true
+            }) {
+                HStack {
+                    Text("문의사항 보내기")
+                        .font(.system(size: 14))
+                        .foregroundColor(.black)
+                    Spacer()
+                    Image(systemName: "arrow.right")
+                }
+                .padding(.all, 20)
             }
+            
+            Rectangle()
+                .fill(Color.gray)
+                .frame(height: 1)
         }
     }
 }
