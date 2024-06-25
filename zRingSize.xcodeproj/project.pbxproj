@@ -40,7 +40,6 @@
 		DA2077FC2BF3212C00C38A8C /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DA2077FB2BF3212C00C38A8C /* GoogleMobileAds */; };
 		DA2A67C52C2932D40048AED5 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67C42C2932D40048AED5 /* Color+Extensions.swift */; };
 		DA2A67C72C2933120048AED5 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67C62C2933120048AED5 /* Date+Extensions.swift */; };
-		DA2A67C92C2933300048AED5 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67C82C2933300048AED5 /* View+Extensions.swift */; };
 		DA2A67D52C293E220048AED5 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67D42C293E220048AED5 /* Path.swift */; };
 		DA2A67D82C293E510048AED5 /* PathType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67D72C293E510048AED5 /* PathType.swift */; };
 		DA2A67DD2C293FCD0048AED5 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67DC2C293FCD0048AED5 /* Tab.swift */; };
@@ -116,7 +115,6 @@
 		DA2077FD2BF3457B00C38A8C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DA2A67C42C2932D40048AED5 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		DA2A67C62C2933120048AED5 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		DA2A67C82C2933300048AED5 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		DA2A67D42C293E220048AED5 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		DA2A67D72C293E510048AED5 /* PathType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathType.swift; sourceTree = "<group>"; };
 		DA2A67DC2C293FCD0048AED5 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 			children = (
 				DA2A67C42C2932D40048AED5 /* Color+Extensions.swift */,
 				DA2A67C62C2933120048AED5 /* Date+Extensions.swift */,
-				DA2A67C82C2933300048AED5 /* View+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -568,7 +565,6 @@
 			files = (
 				DA2A67E72C2947260048AED5 /* zRingSize-Bridging-Header.h in Sources */,
 				B0E047F22BB145B10042E91B /* FingerView.swift in Sources */,
-				DA2A67C92C2933300048AED5 /* View+Extensions.swift in Sources */,
 				B03A6F2B2BE37923007FCF3C /* RingDisplayView.swift in Sources */,
 				B0A28D662BBE269200BAA025 /* FingerDisplayView.swift in Sources */,
 				DAAC46562C0EE47700C2649A /* CustomFont.swift in Sources */,
@@ -778,7 +774,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.4;
+				MARKETING_VERSION = 2.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -819,7 +815,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.4;
+				MARKETING_VERSION = 2.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

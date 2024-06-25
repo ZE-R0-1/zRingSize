@@ -21,7 +21,6 @@ class HistoryViewModel: ObservableObject {
             if modelManager.deleteRecord(record: recordToDelete) {
                 items.remove(at: index)
             } else {
-                // 삭제 실패 처리
                 print("데이터 삭제에 실패했습니다.")
             }
         }

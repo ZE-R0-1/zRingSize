@@ -80,7 +80,7 @@ private struct TotalView: View {
             }) {
                 HStack {
                     Text("문의사항 보내기")
-                        .font(.system(size: 14))
+                        .customFont(.headline)
                         .foregroundColor(.black)
                     Spacer()
                     Image(systemName: "arrow.right")
@@ -114,7 +114,7 @@ private struct LinkMoveView<Destination: View>: View {
             label: {
                 HStack {
                     Text(title)
-                        .font(.system(size: 14))
+                        .customFont(.headline)
                         .foregroundColor(.black)
                     Spacer()
                     Image(systemName: "arrow.right")
@@ -134,7 +134,7 @@ private struct ToggleView: View {
         VStack {
             HStack {
                 Text(title)
-                    .font(.system(size: 14))
+                    .customFont(.headline)
                     .foregroundColor(.black)
                 Spacer()
                 Toggle("", isOn: $isOn)
@@ -150,7 +150,7 @@ private struct TitleView: View {
     fileprivate var body: some View {
         HStack {
             Text("설정")
-                .font(.system(size: 30, weight: .bold))
+                .customFont(.largeTitle)
                 .foregroundColor(.black)
             Spacer()
         }

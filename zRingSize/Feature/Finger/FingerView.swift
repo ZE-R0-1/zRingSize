@@ -31,7 +31,9 @@ struct FingerView: View {
                 VStack(spacing: 20) {
                     Text("손가락 너비: \(String(format: "%.1f", viewModel.fingerWidth * 10))mm")
                         .padding()
-                    Text("예상 반지 호수: \(viewModel.filteredItems.first ?? "")")
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text("예상 반지 호수: \(viewModel.filteredItems.first ?? "      ")")
+                        .fixedSize(horizontal: false, vertical: true)
                     Slider(value: $viewModel.fingerWidth, in: 1.31...2.25, step: 0.01)
                         .padding([.leading, .trailing], 70)
                         .onChange(of: viewModel.fingerWidth) { newValue in

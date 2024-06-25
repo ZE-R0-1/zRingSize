@@ -46,6 +46,7 @@ struct RingView: View {
                         }
                     
                     Text("반지 지름: \(String(format: "%.1f", viewModel.ringDiameter * 10))mm")
+                        .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                 }
                 .navigationBarTitle("반지", displayMode: .inline)
@@ -54,7 +55,7 @@ struct RingView: View {
                         showingAlert = true
                     }
                 )
-                .alert("링사이즈", isPresented: $showingAlert) {
+                .alert("반지사이즈", isPresented: $showingAlert) {
                     TextField("제목을 적어주세요", text: $title)
                     Button("확인") {
                         saveData() // 함수 호출

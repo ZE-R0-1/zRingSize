@@ -68,8 +68,8 @@ private struct SeperatorLineView: View {
     fileprivate var body: some View {
         VStack {
             Spacer()
-            GoogleAdView()
-                .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
+//            GoogleAdView()
+//                .frame(width: UIScreen.main.bounds.width, height: GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width).size.height)
             Rectangle()
                 .fill(
                     LinearGradient(

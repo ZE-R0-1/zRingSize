@@ -16,8 +16,8 @@ struct GoogleAdView: UIViewControllerRepresentable {
         banner.rootViewController = viewController
         viewController.view.addSubview(banner)
         viewController.view.frame = CGRect(origin: .zero, size: bannerSize.size)
-//        banner.adUnitID = "ca-app-pub-6342983620525776/7065190857"
-        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716" // 테스트
+        banner.adUnitID = "ca-app-pub-6342983620525776/7065190857"
+//        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716" // 테스트
         banner.load(GADRequest())
         banner.delegate = context.coordinator
         return viewController
