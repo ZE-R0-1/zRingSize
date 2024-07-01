@@ -8,8 +8,27 @@
 import SwiftUI
 import GoogleMobileAds
 
-struct GoogleAdView: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> some UIViewController {
+struct GoogleAdView: View {
+    @Binding var adLoaded: Bool
+    
+    var body: some View {
+        ZStack {
+            if adLoaded {
+                BannerViewController(adLoaded: $adLoaded)
+                    .frame(height: 50)  // 광고의 높이에 맞게 조정하세요
+            } else {
+                Text("이 위치는 광고입니다")
+                    .frame(height: 50)  // 광고의 높이와 동일하게 설정
+                    .background(Color.gray.opacity(0.2))
+            }
+        }
+    }
+}
+
+struct BannerViewController: UIViewControllerRepresentable {
+    @Binding var adLoaded: Bool
+    
+    func makeUIViewController(context: Context) -> UIViewController {
         let viewController = UIViewController()
         let bannerSize = GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(UIScreen.main.bounds.width)
         let banner = GADBannerView(adSize: bannerSize)
@@ -23,21 +42,31 @@ struct GoogleAdView: UIViewControllerRepresentable {
         return viewController
     }
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
-    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator()
+        Coordinator(self)
     }
     
     class Coordinator: NSObject, GADBannerViewDelegate {
+        var parent: BannerViewController
+        
+        init(_ parent: BannerViewController) {
+            self.parent = parent
+        }
+        
         func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
             print("bannerViewDidReceiveAd")
+            DispatchQueue.main.async {
+                self.parent.adLoaded = true
+            }
         }
         
         func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
             print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+            DispatchQueue.main.async {
+                self.parent.adLoaded = false
+            }
         }
         
         func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
@@ -55,5 +84,12 @@ struct GoogleAdView: UIViewControllerRepresentable {
         func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
             print("bannerViewDidDismissScreen")
         }
+    }
+}
+
+// Preview 제공자
+struct GoogleAdView_Previews: PreviewProvider {
+    static var previews: some View {
+        GoogleAdView(adLoaded: .constant(false))
     }
 }

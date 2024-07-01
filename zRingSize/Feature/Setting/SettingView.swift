@@ -16,7 +16,7 @@ struct SettingView: View {
             VStack {
                 TitleView()
                 Spacer()
-                    .frame(height: 35)
+                    .frame(height: 15)
                 TotalView(showingEmailSheet: $showingEmailSheet)
                 Spacer()
             }
@@ -155,7 +155,7 @@ private struct TitleView: View {
             Spacer()
         }
         .padding(.horizontal, 30)
-        .padding(.top, 45)
+        .padding(.top, 10)
     }
 }
 

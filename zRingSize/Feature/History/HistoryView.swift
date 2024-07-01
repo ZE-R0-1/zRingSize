@@ -14,7 +14,7 @@ struct HistoryView: View {
         VStack {
             TitleView()
             Spacer()
-                .frame(height: 35)
+                .frame(height: 15)
             Rectangle()
                 .fill(Color.gray)
                 .frame(height: 1)
@@ -69,7 +69,7 @@ private struct TitleView: View {
             Spacer()
         }
         .padding(.horizontal, 30)
-        .padding(.top, 45)
+        .padding(.top, 10)
     }
 }
 
