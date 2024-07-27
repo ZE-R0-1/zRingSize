@@ -17,7 +17,7 @@ struct GoogleAdView: View {
                 BannerViewController(adLoaded: $adLoaded)
                     .frame(height: 50)  // 광고의 높이에 맞게 조정하세요
             } else {
-                Text("이 위치는 광고입니다")
+                Text("현재 표시할 광고가 없습니다")
                     .frame(height: 50)  // 광고의 높이와 동일하게 설정
                     .background(Color.gray.opacity(0.2))
             }
@@ -84,12 +84,5 @@ struct BannerViewController: UIViewControllerRepresentable {
         func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
             print("bannerViewDidDismissScreen")
         }
-    }
-}
-
-// Preview 제공자
-struct GoogleAdView_Previews: PreviewProvider {
-    static var previews: some View {
-        GoogleAdView(adLoaded: .constant(false))
     }
 }

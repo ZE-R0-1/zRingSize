@@ -12,7 +12,7 @@ class Util {
     
     static let share = Util()
     
-    //MARK:- Getting Path of our database
+    // MARK: - 데이터베이스 경로 가져오기
     
     func getPath(dbName: String) -> String {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -21,7 +21,7 @@ class Util {
         return fileUrl.path
     }
     
-    //MARK:- If Database path is not exists the creating database path
+    // MARK: - 데이터베이스 경로가 없으면 경로 생성하기
     func copyDatabase(dbName: String) {
         let dbPath = getPath(dbName: "zRingSize.db")
         let fileManager = FileManager.default
