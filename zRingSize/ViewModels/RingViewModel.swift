@@ -6,6 +6,7 @@
 //
 
 import RealmSwift
+import Combine
 
 class RingViewModel: ObservableObject {
     @Published var ringDiameter: Double = Constants.minRingDiameter
@@ -41,6 +42,7 @@ class RingViewModel: ObservableObject {
     func saveMeasurement(title: String) {
         do {
             try measurementService.saveMeasurement(title: title, size: ringDiameter, type: .ring)
+            loadRecentMeasurements()
         } catch {
             self.errorMessage = "측정 기록을 저장하는데 실패했습니다: \(error.localizedDescription)"
             self.showingError = true

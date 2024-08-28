@@ -6,6 +6,7 @@
 //
 
 import RealmSwift
+import Foundation
 
 class SizeRecord: Object, Identifiable {
     @Persisted(primaryKey: true) var id: UUID = UUID()

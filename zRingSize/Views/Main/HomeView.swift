@@ -20,9 +20,8 @@ struct HomeView: View {
                 VStack(spacing: Constants.padding) {
                     MeasurementGridView(showingAddMeasurement: $showingAddMeasurement)
                         .environmentObject(viewModel)
-                    
-                    RecentMeasurementsView(measurements: viewModel.recentMeasurements)
-                    
+                    HistoryView(viewModel: viewModel)
+                        .environmentObject(viewModel)
                     Spacer()
                 }
                 .padding()

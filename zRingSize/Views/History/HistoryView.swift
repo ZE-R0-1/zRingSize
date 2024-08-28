@@ -2,42 +2,53 @@
 //  HistoryView.swift
 //  zRingSize
 //
-//  Created by KMUSER on 2024/03/25.
+//  Created by zero on 7/27/24.
 //
 
 import SwiftUI
 
 struct HistoryView: View {
-    @StateObject private var viewModel = HistoryViewModel()
+    @ObservedObject var viewModel: HomeViewModel
+    @State private var isDeleteMode = false
     
     var body: some View {
-        List {
-            ForEach(viewModel.measurements) { measurement in
-                NavigationLink(destination: MeasurementDetailView(measurement: measurement)) {
-                    MeasurementRowView(measurement: measurement)
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                Text("측정 기록")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Spacer()
+                Button(action: {
+                    isDeleteMode.toggle()
+                }) {
+                    Image(systemName: isDeleteMode ? "checkmark.circle.fill" : "trash")
+                        .foregroundColor(isDeleteMode ? .green : .red)
+                        .font(.system(size: 20))
                 }
             }
-            .onDelete(perform: viewModel.deleteMeasurement)
+            .padding(.horizontal)
+            
+            if viewModel.recentMeasurements.isEmpty {
+                Text("최근 측정 기록이 없습니다.")
+                    .foregroundColor(.secondary)
+                    .padding()
+            } else {
+                ForEach(viewModel.recentMeasurements) { measurement in
+                    MeasurementRowView(measurement: measurement, isDeleteMode: $isDeleteMode, onDelete: {
+                        viewModel.deleteMeasurement(id: measurement.id)
+                    })
+                }
+            }
         }
-        .navigationTitle("측정 기록")
-        .navigationBarItems(trailing: EditButton())
-        .onAppear {
-            viewModel.fetchMeasurements()
-        }
-        .alert(isPresented: $viewModel.showingError) {
-            Alert(
-                title: Text("오류"),
-                message: Text(viewModel.errorMessage ?? "알 수 없는 오류가 발생했습니다."),
-                dismissButton: .default(Text("확인"))
-            )
-        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(Constants.cornerRadius)
+        .shadow(color: Constants.shadowColor, radius: Constants.shadowRadius, x: 0, y: 5)
     }
 }
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            HistoryView()
-        }
+        HistoryView(viewModel: HomeViewModel())
     }
 }

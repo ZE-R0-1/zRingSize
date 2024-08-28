@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MeasurementRowView: View {
     let measurement: SizeRecord
+    @Binding var isDeleteMode: Bool
+    var onDelete: () -> Void
     
     var body: some View {
         HStack {
@@ -23,11 +25,23 @@ struct MeasurementRowView: View {
                     .foregroundColor(.secondary)
             }
             Spacer()
-            Text(measurement.date.timeAgoDisplay())
-                .font(.caption)
-                .foregroundColor(.secondary)
+            if isDeleteMode {
+                Button(action: onDelete) {
+                    Image(systemName: "trash")
+                        .foregroundColor(.red)
+                }
+            } else {
+                Text(measurement.date.timeAgoDisplay())
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
         }
         .padding(.vertical, 8)
         .padding(.horizontal)
+        .background(
+            NavigationLink(destination: MeasurementDetailView(measurement: measurement)) {
+                EmptyView()
+            }.opacity(0)
+        )
     }
 }

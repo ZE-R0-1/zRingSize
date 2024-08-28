@@ -6,6 +6,8 @@
 //
 
 import RealmSwift
+import Combine
+import Foundation
 
 class HistoryViewModel: ObservableObject {
     @Published var measurements: [SizeRecord] = []

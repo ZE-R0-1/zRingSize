@@ -7,6 +7,7 @@
 
 import Combine
 import RealmSwift
+import Foundation
 
 class HomeViewModel: ObservableObject {
     @Published var selectedTab: Tab = .ring
@@ -42,6 +43,11 @@ class HomeViewModel: ObservableObject {
     }
     
     func updateMeasurements() {
+        fetchRecentMeasurements()
+    }
+    
+    func deleteMeasurement(id: UUID) {
+        measurementService.deleteMeasurement(id: id)
         fetchRecentMeasurements()
     }
     

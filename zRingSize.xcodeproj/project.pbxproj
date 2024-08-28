@@ -10,13 +10,7 @@
 		2291B2462BE5EE8B00920C29 /* GoogleAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291B2452BE5EE8B00920C29 /* GoogleAdView.swift */; };
 		B03A6F272BE36992007FCF3C /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A6F262BE36992007FCF3C /* DeviceInfo.swift */; };
 		B03E6C4A2BD8D0BA0015AA9A /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E6C492BD8D0BA0015AA9A /* HistoryViewModel.swift */; };
-		B056BB4B2BD8C7CD0066AE48 /* zRingSize.db in Resources */ = {isa = PBXBuildFile; fileRef = B056BB4A2BD8C7CD0066AE48 /* zRingSize.db */; };
 		B0A28D602BBD12BE00BAA025 /* SizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D5F2BBD12BE00BAA025 /* SizeModel.swift */; };
-		B0CF52F42BD8829F00DA1841 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF52EA2BD8829E00DA1841 /* FMResultSet.m */; };
-		B0CF52F52BD8829F00DA1841 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF52EC2BD8829E00DA1841 /* FMDatabase.m */; };
-		B0CF52F62BD8829F00DA1841 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF52ED2BD8829E00DA1841 /* FMDatabaseQueue.m */; };
-		B0CF52F72BD8829F00DA1841 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF52F02BD8829F00DA1841 /* FMDatabaseAdditions.m */; };
-		B0CF52F82BD8829F00DA1841 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CF52F12BD8829F00DA1841 /* FMDatabasePool.m */; };
 		B0CF52FB2BD882E100DA1841 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CF52FA2BD882C400DA1841 /* libsqlite3.tbd */; };
 		B0CF53052BD88D1B00DA1841 /* SizeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF53042BD88D1B00DA1841 /* SizeRecord.swift */; };
 		B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A62BB3D82900B66190 /* RingViewModel.swift */; };
@@ -29,18 +23,16 @@
 		B0E047DC2BB117B20042E91B /* zRingSizeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047DB2BB117B20042E91B /* zRingSizeUITestsLaunchTests.swift */; };
 		B0E047F02BB1459F0042E91B /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047EF2BB1459F0042E91B /* RingView.swift */; };
 		B0E047F22BB145B10042E91B /* FingerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F12BB145B10042E91B /* FingerView.swift */; };
-		B0E047F42BB145BF0042E91B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F32BB145BF0042E91B /* HistoryView.swift */; };
 		DA2077FC2BF3212C00C38A8C /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DA2077FB2BF3212C00C38A8C /* GoogleMobileAds */; };
 		DA2A67C52C2932D40048AED5 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67C42C2932D40048AED5 /* Color+Extensions.swift */; };
 		DA2A67C72C2933120048AED5 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67C62C2933120048AED5 /* Date+Extensions.swift */; };
 		DA2A67E32C2941820048AED5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67E22C2941820048AED5 /* HomeView.swift */; };
 		DA2A67E52C2941E30048AED5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67E42C2941E30048AED5 /* HomeViewModel.swift */; };
-		DA2A67E72C2947260048AED5 /* zRingSize-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = B0CF52E82BD8829D00DA1841 /* zRingSize-Bridging-Header.h */; };
 		DA98406B2C54E7B2003DBBB1 /* MeasurementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98406A2C54E7B2003DBBB1 /* MeasurementService.swift */; };
 		DA98406D2C54E7BC003DBBB1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98406C2C54E7BC003DBBB1 /* Constants.swift */; };
 		DA98406F2C54E9A0003DBBB1 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98406E2C54E9A0003DBBB1 /* SettingsViewModel.swift */; };
 		DA9840772C54EA52003DBBB1 /* MeasurementGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9840762C54EA52003DBBB1 /* MeasurementGridView.swift */; };
-		DA9840792C54EA5E003DBBB1 /* RecentMeasurementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9840782C54EA5E003DBBB1 /* RecentMeasurementsView.swift */; };
+		DA9840792C54EA5E003DBBB1 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9840782C54EA5E003DBBB1 /* HistoryView.swift */; };
 		DA98407B2C54EA69003DBBB1 /* MeasurementGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98407A2C54EA69003DBBB1 /* MeasurementGuideView.swift */; };
 		DA98407D2C54EA85003DBBB1 /* MeasurementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98407C2C54EA85003DBBB1 /* MeasurementDetailView.swift */; };
 		DA98407F2C54EA92003DBBB1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98407E2C54EA92003DBBB1 /* SettingsView.swift */; };
@@ -79,20 +71,7 @@
 		B036A1752BB284B300546228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "zRingSize/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		B03A6F262BE36992007FCF3C /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		B03E6C492BD8D0BA0015AA9A /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
-		B056BB4A2BD8C7CD0066AE48 /* zRingSize.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = zRingSize.db; sourceTree = "<group>"; };
 		B0A28D5F2BBD12BE00BAA025 /* SizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeModel.swift; sourceTree = "<group>"; };
-		B0CF52E82BD8829D00DA1841 /* zRingSize-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zRingSize-Bridging-Header.h"; sourceTree = "<group>"; };
-		B0CF52E92BD8829E00DA1841 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		B0CF52EA2BD8829E00DA1841 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		B0CF52EB2BD8829E00DA1841 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		B0CF52EC2BD8829E00DA1841 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		B0CF52ED2BD8829E00DA1841 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		B0CF52EE2BD8829E00DA1841 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		B0CF52EF2BD8829E00DA1841 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		B0CF52F02BD8829F00DA1841 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		B0CF52F12BD8829F00DA1841 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		B0CF52F22BD8829F00DA1841 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		B0CF52F32BD8829F00DA1841 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
 		B0CF52FA2BD882C400DA1841 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B0CF53042BD88D1B00DA1841 /* SizeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeRecord.swift; sourceTree = "<group>"; };
 		B0DD22A62BB3D82900B66190 /* RingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewModel.swift; sourceTree = "<group>"; };
@@ -108,7 +87,6 @@
 		B0E047DB2BB117B20042E91B /* zRingSizeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zRingSizeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B0E047EF2BB1459F0042E91B /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		B0E047F12BB145B10042E91B /* FingerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerView.swift; sourceTree = "<group>"; };
-		B0E047F32BB145BF0042E91B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		DA2077FD2BF3457B00C38A8C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DA2A67C42C2932D40048AED5 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		DA2A67C62C2933120048AED5 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -118,7 +96,7 @@
 		DA98406C2C54E7BC003DBBB1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DA98406E2C54E9A0003DBBB1 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DA9840762C54EA52003DBBB1 /* MeasurementGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementGridView.swift; sourceTree = "<group>"; };
-		DA9840782C54EA5E003DBBB1 /* RecentMeasurementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMeasurementsView.swift; sourceTree = "<group>"; };
+		DA9840782C54EA5E003DBBB1 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		DA98407A2C54EA69003DBBB1 /* MeasurementGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementGuideView.swift; sourceTree = "<group>"; };
 		DA98407C2C54EA85003DBBB1 /* MeasurementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementDetailView.swift; sourceTree = "<group>"; };
 		DA98407E2C54EA92003DBBB1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -167,29 +145,8 @@
 			children = (
 				B0E047BD2BB117B10042E91B /* Assets.xcassets */,
 				DAAC46502C0EE30700C2649A /* Fonts */,
-				B0CF52E72BD8813800DA1841 /* FMDB */,
-				B056BB4A2BD8C7CD0066AE48 /* zRingSize.db */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		B0CF52E72BD8813800DA1841 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				B0CF52EB2BD8829E00DA1841 /* FMDatabase.h */,
-				B0CF52EC2BD8829E00DA1841 /* FMDatabase.m */,
-				B0CF52EF2BD8829E00DA1841 /* FMDatabaseAdditions.h */,
-				B0CF52F02BD8829F00DA1841 /* FMDatabaseAdditions.m */,
-				B0CF52F22BD8829F00DA1841 /* FMDatabasePool.h */,
-				B0CF52F12BD8829F00DA1841 /* FMDatabasePool.m */,
-				B0CF52F32BD8829F00DA1841 /* FMDatabaseQueue.h */,
-				B0CF52ED2BD8829E00DA1841 /* FMDatabaseQueue.m */,
-				B0CF52EE2BD8829E00DA1841 /* FMDB.h */,
-				B0CF52E92BD8829E00DA1841 /* FMResultSet.h */,
-				B0CF52EA2BD8829E00DA1841 /* FMResultSet.m */,
-				B0CF52E82BD8829D00DA1841 /* zRingSize-Bridging-Header.h */,
-			);
-			path = FMDB;
 			sourceTree = "<group>";
 		};
 		B0CF52F92BD882C300DA1841 /* Frameworks */ = {
@@ -353,7 +310,6 @@
 			children = (
 				DA2A67E22C2941820048AED5 /* HomeView.swift */,
 				DA9840762C54EA52003DBBB1 /* MeasurementGridView.swift */,
-				DA9840782C54EA5E003DBBB1 /* RecentMeasurementsView.swift */,
 				DA9840932C71FFEE003DBBB1 /* MeasurementRowView.swift */,
 			);
 			path = Main;
@@ -383,7 +339,7 @@
 		DA9840732C54EA0A003DBBB1 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				B0E047F32BB145BF0042E91B /* HistoryView.swift */,
+				DA9840782C54EA5E003DBBB1 /* HistoryView.swift */,
 				DA98407C2C54EA85003DBBB1 /* MeasurementDetailView.swift */,
 			);
 			path = History;
@@ -477,7 +433,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					B0E047B52BB117B00042E91B = {
 						CreatedOnToolsVersion = 14.2;
@@ -524,7 +480,6 @@
 			files = (
 				B0E047C12BB117B10042E91B /* Preview Assets.xcassets in Resources */,
 				DAAC46532C0EE30700C2649A /* Poppins-Bold.ttf in Resources */,
-				B056BB4B2BD8C7CD0066AE48 /* zRingSize.db in Resources */,
 				DAAC46512C0EE30700C2649A /* Inter-Regular.ttf in Resources */,
 				DAAC46522C0EE30700C2649A /* Inter-SemiBold.ttf in Resources */,
 				B0E047BE2BB117B10042E91B /* Assets.xcassets in Resources */,
@@ -552,14 +507,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA2A67E72C2947260048AED5 /* zRingSize-Bridging-Header.h in Sources */,
 				B0E047F22BB145B10042E91B /* FingerView.swift in Sources */,
 				DA9840872C54EAB8003DBBB1 /* CustomAlert.swift in Sources */,
 				DA98408C2C54F143003DBBB1 /* SizeChartView.swift in Sources */,
 				DA2A67E32C2941820048AED5 /* HomeView.swift in Sources */,
 				DA9840812C54EA9C003DBBB1 /* SettingsItemView.swift in Sources */,
-				B0CF52F52BD8829F00DA1841 /* FMDatabase.m in Sources */,
-				B0CF52F82BD8829F00DA1841 /* FMDatabasePool.m in Sources */,
 				DA98407D2C54EA85003DBBB1 /* MeasurementDetailView.swift in Sources */,
 				DA98406B2C54E7B2003DBBB1 /* MeasurementService.swift in Sources */,
 				B03E6C4A2BD8D0BA0015AA9A /* HistoryViewModel.swift in Sources */,
@@ -569,22 +521,18 @@
 				DA9840772C54EA52003DBBB1 /* MeasurementGridView.swift in Sources */,
 				DA98406F2C54E9A0003DBBB1 /* SettingsViewModel.swift in Sources */,
 				B0CF53052BD88D1B00DA1841 /* SizeRecord.swift in Sources */,
-				B0CF52F62BD8829F00DA1841 /* FMDatabaseQueue.m in Sources */,
 				DA98407F2C54EA92003DBBB1 /* SettingsView.swift in Sources */,
 				DA98407B2C54EA69003DBBB1 /* MeasurementGuideView.swift in Sources */,
 				B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */,
 				B0A28D602BBD12BE00BAA025 /* SizeModel.swift in Sources */,
 				B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */,
-				B0CF52F42BD8829F00DA1841 /* FMResultSet.m in Sources */,
 				DA2A67E52C2941E30048AED5 /* HomeViewModel.swift in Sources */,
 				B0E047BA2BB117B00042E91B /* zRingSizeApp.swift in Sources */,
-				DA9840792C54EA5E003DBBB1 /* RecentMeasurementsView.swift in Sources */,
+				DA9840792C54EA5E003DBBB1 /* HistoryView.swift in Sources */,
 				DA2A67C72C2933120048AED5 /* Date+Extensions.swift in Sources */,
 				2291B2462BE5EE8B00920C29 /* GoogleAdView.swift in Sources */,
-				B0E047F42BB145BF0042E91B /* HistoryView.swift in Sources */,
 				DA2A67C52C2932D40048AED5 /* Color+Extensions.swift in Sources */,
 				DA9840832C54EAA7003DBBB1 /* CustomButton.swift in Sources */,
-				B0CF52F72BD8829F00DA1841 /* FMDatabaseAdditions.m in Sources */,
 				DA98408E2C54F1E8003DBBB1 /* WebView.swift in Sources */,
 				DA98406D2C54E7BC003DBBB1 /* Constants.swift in Sources */,
 				DA9840852C54EAB1003DBBB1 /* CustomTextField.swift in Sources */,
@@ -628,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -689,6 +638,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -774,7 +724,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "zRingSize/Resource/FMDB/zRingSize-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -815,7 +765,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "zRingSize/Resource/FMDB/zRingSize-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

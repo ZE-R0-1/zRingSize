@@ -52,7 +52,7 @@ class AppState: ObservableObject {
 }
 
 enum Tab {
-    case ring, finger, history, settings
+    case ring, finger, settings
 }
 
 struct ContentView: View {
@@ -67,14 +67,6 @@ struct ContentView: View {
                 Label("Home", systemImage: "house")
             }
             .tag(Tab.ring)
-            
-            NavigationView {
-                HistoryView()
-            }
-            .tabItem {
-                Label("History", systemImage: "clock")
-            }
-            .tag(Tab.history)
             
             NavigationView {
                 SettingsView()
