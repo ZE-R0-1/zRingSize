@@ -1,6 +1,24 @@
 {
-  "originHash" : "3b9752ff554d5fdc91a7c01c2322a5d851b0979c36f02eb55188d9ab9e3d7e77",
+  "originHash" : "a3f967671615e41004e07f9ac74108c30e77163a20fa763df41169f0c9f6d226",
   "pins" : [
+    {
+      "identity" : "realm-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-core.git",
+      "state" : {
+        "revision" : "c2552e1d36867cb42b28130e894a81fc17081062",
+        "version" : "14.12.0"
+      }
+    },
+    {
+      "identity" : "realm-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-swift.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "7ffcc1165fe335b793f59c5a4ff0d472fcc1625a"
+      }
+    },
     {
       "identity" : "swift-package-manager-google-mobile-ads",
       "kind" : "remoteSourceControl",

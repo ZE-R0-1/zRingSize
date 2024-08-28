@@ -7,29 +7,82 @@
 
 import SwiftUI
 import GoogleMobileAds
-import AdSupport
 import AppTrackingTransparency
 
 @main
-struct zRingSizeApp: App {
+struct ZRingSizeApp: App {
+    @StateObject private var appState = AppState()
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            ContentView()
+                .environmentObject(appState)
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
-                    ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in })
+                    requestTrackingAuthorization()
                 }
         }
     }
     
     init() {
+        setupGoogleMobileAds()
+    }
+    
+    private func setupGoogleMobileAds() {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-        
-        // DispatchQueue 이용
+    }
+    
+    private func requestTrackingAuthorization() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in })
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                case .authorized:
+                    print("Tracking authorization granted.")
+                case .denied, .restricted, .notDetermined:
+                    print("Tracking authorization not granted.")
+                @unknown default:
+                    print("Unknown tracking authorization status.")
+                }
+            }
         }
-        Util.share.copyDatabase(dbName: "zRingSize.db")
     }
 }
 
+class AppState: ObservableObject {
+    @Published var currentTab: Tab = .ring
+}
+
+enum Tab {
+    case ring, finger, history, settings
+}
+
+struct ContentView: View {
+    @EnvironmentObject var appState: AppState
+    
+    var body: some View {
+        TabView(selection: $appState.currentTab) {
+            NavigationView {
+                HomeView()
+            }
+            .tabItem {
+                Label("Home", systemImage: "house")
+            }
+            .tag(Tab.ring)
+            
+            NavigationView {
+                HistoryView()
+            }
+            .tabItem {
+                Label("History", systemImage: "clock")
+            }
+            .tag(Tab.history)
+            
+            NavigationView {
+                SettingsView()
+            }
+            .tabItem {
+                Label("Settings", systemImage: "gear")
+            }
+            .tag(Tab.settings)
+        }
+    }
+}
