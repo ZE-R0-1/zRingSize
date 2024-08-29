@@ -8,10 +8,15 @@
 import Foundation
 import RealmSwift
 
+// 측정 데이터를 관리하는 서비스 클래스
 class MeasurementService {
+    // 싱글톤 인스턴스
     static let shared = MeasurementService()
+    
+    // Realm 데이터베이스 인스턴스
     private var realm: Realm
     
+    // 프라이빗 초기화 메서드
     private init() {
         do {
             realm = try Realm()
@@ -20,6 +25,7 @@ class MeasurementService {
         }
     }
     
+    // 새로운 측정 데이터를 저장하는 메서드
     func saveMeasurement(title: String, size: Double, type: SizeRecord.MeasurementType) throws {
         let newMeasurement = SizeRecord()
         newMeasurement.title = title
@@ -36,14 +42,17 @@ class MeasurementService {
         }
     }
     
+    // 모든 측정 데이터를 가져오는 메서드
     func getMeasurements() -> [SizeRecord] {
         return Array(realm.objects(SizeRecord.self).sorted(byKeyPath: "date", ascending: false))
     }
     
+    // 최근 측정 데이터를 제한된 수만큼 가져오는 메서드
     func getRecentMeasurements(limit: Int) -> [SizeRecord] {
         return Array(realm.objects(SizeRecord.self).sorted(byKeyPath: "date", ascending: false).prefix(limit))
     }
     
+    // 특정 ID의 측정 데이터를 삭제하는 메서드
     func deleteMeasurement(id: UUID) {
         if let measurementToDelete = realm.object(ofType: SizeRecord.self, forPrimaryKey: id) {
             do {
@@ -55,17 +64,4 @@ class MeasurementService {
             }
         }
     }
-    
-    func calculateRingSize(diameter: Double) -> String {
-        // 여기에 반지 사이즈 계산 로직을 구현합니다.
-        // 이 예시에서는 간단히 직경을 문자열로 반환합니다.
-        return String(format: "%.1f", diameter)
-    }
-    
-    func convertFingerToRingSize(fingerWidth: Double) -> String {
-        // 여기에 손가락 너비를 반지 사이즈로 변환하는 로직을 구현합니다.
-        // 이 예시에서는 간단히 너비를 문자열로 반환합니다.
-        return String(format: "%.1f", fingerWidth)
-    }
 }
-

@@ -20,8 +20,12 @@ struct MeasurementDetailView: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     detailRow(title: "측정 유형", value: measurement.type == SizeRecord.MeasurementType.ring.rawValue ? "반지" : "손가락")
-                    detailRow(title: "크기", value: String(format: "%.1f mm", measurement.size))
-                    detailRow(title: "예상 반지 사이즈", value: viewModel.getMeasurementDetails(measurement))
+                    if measurement.type == SizeRecord.MeasurementType.ring.rawValue {
+                        detailRow(title: "반지 직경", value: String(format: "%.1f mm", measurement.size))
+                    } else {
+                        detailRow(title: "손가락 둘레", value: String(format: "%.1f mm", measurement.size))
+                    }
+                    detailRow(title: "예상 반지 호수", value: viewModel.getEstimatedRingSize(measurement))
                     detailRow(title: "측정 일시", value: measurement.date.formattedString())
                 }
                 .padding()
@@ -50,7 +54,7 @@ struct MeasurementDetailView: View {
 struct MeasurementDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MeasurementDetailView(measurement: SizeRecord(title: "내 반지", size: 16.5, type: .finger))
+            MeasurementDetailView(measurement: SizeRecord(title: "내 반지", size: 16.5, type: .ring))
         }
     }
 }

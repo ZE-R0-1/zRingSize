@@ -48,11 +48,6 @@ struct SizeModel {
         return closestSize?.key ?? "Unknown"
     }
     
-    // 반지 사이즈 문자열을 받아 해당하는 직경을 반환하는 메서드
-    static func getDiameter(for size: String) -> Double? {
-        return ringSizes[size]
-    }
-    
     // 손가락 둘레를 반지 직경으로 변환하는 메서드
     static func fingerCircumferenceToRingDiameter(_ circumference: Double) -> Double {
         return circumference / .pi

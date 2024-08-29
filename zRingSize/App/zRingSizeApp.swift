@@ -11,12 +11,9 @@ import AppTrackingTransparency
 
 @main
 struct ZRingSizeApp: App {
-    @StateObject private var appState = AppState()
-    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(appState)
+            HomeView()
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
                     requestTrackingAuthorization()
                 }
@@ -36,45 +33,21 @@ struct ZRingSizeApp: App {
             ATTrackingManager.requestTrackingAuthorization { status in
                 switch status {
                 case .authorized:
-                    print("Tracking authorization granted.")
-                case .denied, .restricted, .notDetermined:
-                    print("Tracking authorization not granted.")
+                    print("추적 권한이 승인되었습니다.")
+                case .denied:
+                    print("추적 권한이 거부되었습니다.")
+                case .restricted:
+                    print("추적 기능이 제한되었습니다.")
+                case .notDetermined:
+                    print("추적 권한이 아직 결정되지 않았습니다.")
                 @unknown default:
-                    print("Unknown tracking authorization status.")
+                    print("알 수 없는 추적 권한 상태입니다.")
                 }
             }
         }
     }
 }
 
-class AppState: ObservableObject {
-    @Published var currentTab: Tab = .ring
-}
-
 enum Tab {
     case ring, finger, settings
-}
-
-struct ContentView: View {
-    @EnvironmentObject var appState: AppState
-    
-    var body: some View {
-        TabView(selection: $appState.currentTab) {
-            NavigationView {
-                HomeView()
-            }
-            .tabItem {
-                Label("Home", systemImage: "house")
-            }
-            .tag(Tab.ring)
-            
-            NavigationView {
-                SettingsView()
-            }
-            .tabItem {
-                Label("Settings", systemImage: "gear")
-            }
-            .tag(Tab.settings)
-        }
-    }
 }

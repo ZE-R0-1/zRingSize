@@ -9,50 +9,24 @@ import Combine
 import RealmSwift
 import Foundation
 
+// 홈 화면을 위한 ViewModel
 class HomeViewModel: ObservableObject {
+    // 현재 선택된 탭 (반지 또는 손가락)
     @Published var selectedTab: Tab = .ring
-    @Published var recentMeasurements: [SizeRecord] = []
-    @Published var errorMessage: String?
-    @Published var showingError: Bool = false
     
-    private var notificationToken: NotificationToken?
-    private let measurementService = MeasurementService.shared
+    // 새 측정 추가 화면 표시 여부
+    @Published var showingAddMeasurement = false
     
-    init() {
-        fetchRecentMeasurements()
-        observeRealmChanges()
+    // 측정 기록 관리를 위한 HistoryViewModel
+    let historyViewModel: HistoryViewModel
+    
+    // 초기화 메서드
+    init(historyViewModel: HistoryViewModel = HistoryViewModel()) {
+        self.historyViewModel = historyViewModel
     }
     
-    deinit {
-        notificationToken?.invalidate()
-    }
-    
-    private func observeRealmChanges() {
-        let realm = try! Realm()
-        notificationToken = realm.objects(SizeRecord.self).observe { [weak self] _ in
-            self?.fetchRecentMeasurements()
-        }
-    }
-    
-    func fetchRecentMeasurements() {
-        self.recentMeasurements = measurementService.getRecentMeasurements(limit: Constants.maxRecentMeasurements)
-    }
-    
+    // 탭 변경 메서드
     func changeTab(to tab: Tab) {
         self.selectedTab = tab
-    }
-    
-    func updateMeasurements() {
-        fetchRecentMeasurements()
-    }
-    
-    func deleteMeasurement(id: UUID) {
-        measurementService.deleteMeasurement(id: id)
-        fetchRecentMeasurements()
-    }
-    
-    private func showError(_ message: String) {
-        self.errorMessage = message
-        self.showingError = true
     }
 }

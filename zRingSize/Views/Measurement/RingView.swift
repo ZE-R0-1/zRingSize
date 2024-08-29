@@ -7,16 +7,21 @@
 
 import SwiftUI
 
+// 반지 측정 화면을 나타내는 View 구조체
 struct RingView: View {
+    // ViewModel 인스턴스 생성
     @StateObject private var viewModel = RingViewModel()
+    // 측정 제목을 저장하는 상태 변수
     @State private var measurementTitle = ""
+    // 현재 화면의 표시 상태를 관리하는 환경 변수
     @Environment(\.presentationMode) var presentationMode
-    
+
     var body: some View {
         ZStack {
+            // 배경 그라데이션
             LinearGradient(gradient: Gradient(colors: [Color.white, Color(UIColor.systemGray6)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
-            
+
             ScrollView {
                 VStack(spacing: 20) {
                     titleSection
@@ -29,11 +34,13 @@ struct RingView: View {
             }
         }
         .navigationBarTitle("반지 측정", displayMode: .inline)
+        // 에러 표시를 위한 알림 설정
         .alert(isPresented: $viewModel.showingError) {
             Alert(title: Text("오류"), message: Text(viewModel.errorMessage ?? "알 수 없는 오류가 발생했습니다."), dismissButton: .default(Text("확인")))
         }
     }
-    
+
+    // 측정 제목 입력 섹션
     private var titleSection: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("측정 제목")
@@ -45,6 +52,7 @@ struct RingView: View {
         }
     }
     
+    // 측정 가이드 섹션
     private var measurementGuideSection: some View {
         VStack {
             MeasurementGuideView(size: viewModel.ringDiameter / 10, type: .ring)
@@ -55,6 +63,7 @@ struct RingView: View {
         }
     }
     
+    // 크기 정보 표시 섹션
     private var sizeInfoSection: some View {
         HStack {
             VStack(alignment: .leading, spacing: 8) {
@@ -83,6 +92,7 @@ struct RingView: View {
         .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
     }
     
+    // 슬라이더 섹션
     private var sliderSection: some View {
         VStack(spacing: 10) {
             HStack {
@@ -111,8 +121,10 @@ struct RingView: View {
         .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
     }
     
+    // 저장 버튼
     private var saveButton: some View {
         Button(action: {
+            // 측정 데이터 저장 및 화면 닫기
             viewModel.saveMeasurement(title: measurementTitle)
             presentationMode.wrappedValue.dismiss()
         }) {
