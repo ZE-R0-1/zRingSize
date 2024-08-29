@@ -47,7 +47,7 @@ struct FingerView: View {
     
     private var measurementGuideSection: some View {
         VStack {
-            MeasurementGuideView(size: viewModel.fingerWidth, type: .finger)
+            MeasurementGuideView(size: viewModel.fingerWidth / 10, type: .finger)
                 .frame(height: 200)
                 .background(Color.white)
                 .cornerRadius(15)

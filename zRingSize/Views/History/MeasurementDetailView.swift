@@ -14,7 +14,7 @@ struct MeasurementDetailView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                MeasurementGuideView(size: measurement.size, type: SizeRecord.MeasurementType(rawValue: measurement.type) ?? .ring)
+                MeasurementGuideView(size: measurement.size / 10, type: SizeRecord.MeasurementType(rawValue: measurement.type) ?? .ring)
                     .frame(height: 200)
                     .padding()
                 
@@ -50,7 +50,7 @@ struct MeasurementDetailView: View {
 struct MeasurementDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MeasurementDetailView(measurement: SizeRecord(title: "내 반지", size: 16.5, type: .ring))
+            MeasurementDetailView(measurement: SizeRecord(title: "내 반지", size: 16.5, type: .finger))
         }
     }
 }

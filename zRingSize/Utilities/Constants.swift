@@ -10,8 +10,8 @@ import SwiftUI
 enum Constants {
     static let minRingDiameter: Double = 13.1
     static let maxRingDiameter: Double = 22.5
-    static let minFingerWidth: Double = 41.15
-    static let maxFingerWidth: Double = 70.69
+    static let minFingerWidth: Double = 13.1
+    static let maxFingerWidth: Double = 22.5
 
     static let primaryColor = Color(hex: "#4A90E2")
     static let secondaryColor = Color(hex: "#F5A623")

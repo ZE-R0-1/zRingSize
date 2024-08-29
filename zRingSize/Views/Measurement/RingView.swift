@@ -47,7 +47,7 @@ struct RingView: View {
     
     private var measurementGuideSection: some View {
         VStack {
-            MeasurementGuideView(size: viewModel.ringDiameter, type: .ring)
+            MeasurementGuideView(size: viewModel.ringDiameter / 10, type: .ring)
                 .frame(height: 200)
                 .background(Color.white)
                 .cornerRadius(15)

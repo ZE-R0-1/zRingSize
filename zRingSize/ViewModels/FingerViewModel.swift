@@ -9,7 +9,11 @@ import SwiftUI
 import Combine
 
 class FingerViewModel: ObservableObject {
-    @Published var fingerWidth: Double = Constants.minFingerWidth
+    @Published var fingerWidth: Double = Constants.minFingerWidth {
+        didSet {
+            updateRingSize()
+        }
+    }
     @Published var ringSize: String = ""
     @Published var errorMessage: String?
     @Published var showingError: Bool = false
@@ -17,33 +21,29 @@ class FingerViewModel: ObservableObject {
     private let measurementService = MeasurementService.shared
     
     init() {
-        updateRingSize(width: fingerWidth)
+        updateRingSize()
     }
     
-    private func updateRingSize(width: Double) {
-        self.ringSize = measurementService.convertFingerToRingSize(fingerWidth: width)
+    private func updateRingSize() {
+        let fingerCircumference = SizeModel.ringDiameterToFingerCircumference(fingerWidth)
+        let equivalentRingDiameter = SizeModel.fingerCircumferenceToRingDiameter(fingerCircumference)
+        self.ringSize = SizeModel.getRingSize(for: equivalentRingDiameter)
     }
     
     func saveMeasurement(title: String) {
         do {
-            try measurementService.saveMeasurement(title: title, size: fingerWidth, type: .finger)
+            try measurementService.saveMeasurement(title: title, size: fingerWidth, type: .ring)
         } catch {
-            showError("측정 기록을 저장하는데 실패했습니다: \(error.localizedDescription)")
+            self.errorMessage = "측정 기록을 저장하는데 실패했습니다: \(error.localizedDescription)"
+            self.showingError = true
         }
     }
     
     func incrementWidth() {
         fingerWidth = min(fingerWidth + 0.1, Constants.maxFingerWidth)
-        updateRingSize(width: fingerWidth)
     }
     
     func decrementWidth() {
         fingerWidth = max(fingerWidth - 0.1, Constants.minFingerWidth)
-        updateRingSize(width: fingerWidth)
-    }
-    
-    private func showError(_ message: String) {
-        self.errorMessage = message
-        self.showingError = true
     }
 }

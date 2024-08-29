@@ -24,7 +24,7 @@ struct MeasurementGuideView: View {
                             LinearGradient(gradient: Gradient(colors: Constants.gradientColors), startPoint: .topLeading, endPoint: .bottomTrailing),
                             lineWidth: 4
                         )
-                        .frame(width: CGFloat(size), height: CGFloat(size))
+                        .frame(width: CGFloat(size * onecentimeter), height: CGFloat(size * onecentimeter))
                         .overlay(
                             Circle()
                                 .stroke(Color.white, lineWidth: 2)
@@ -37,7 +37,7 @@ struct MeasurementGuideView: View {
                             LinearGradient(gradient: Gradient(colors: Constants.gradientColors), startPoint: .top, endPoint: .bottom),
                             lineWidth: 4
                         )
-                        .frame(width: CGFloat(size) / .pi, height: geometry.size.height * 0.8)
+                        .frame(width: CGFloat(size * onecentimeter), height: geometry.size.height * 0.8)
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.white, lineWidth: 2)
@@ -62,13 +62,24 @@ struct MeasurementGuideView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
+    
+    public var onecentimeter: CGFloat {
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        let nativeWidth = UIScreen.main.nativeBounds.width
+        let nativeHeight = UIScreen.main.nativeBounds.height
+        let screenDiagonal = CGFloat(hypot(screenWidth, screenHeight)) // 대각선 길이 (포인트 단위)
+        let screenInches = DeviceInfo.screenSize(forWidth: nativeWidth, height: nativeHeight)! // 실제 화면 크기 (인치 단위)
+        let pointsPerInch = screenDiagonal / screenInches // 1인치당 포인트 수
+        return CGFloat(pointsPerInch / 2.54) // 1cm 길이 (포인트 단위)
+    }
 }
 
 struct MeasurementGuideView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            MeasurementGuideView(size: 50, type: .ring)
-            MeasurementGuideView(size: 157, type: .finger)
+            MeasurementGuideView(size: 1, type: .ring)
+            MeasurementGuideView(size: 1, type: .finger)
         }
     }
 }

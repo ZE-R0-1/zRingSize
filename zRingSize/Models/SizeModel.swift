@@ -42,17 +42,6 @@ struct SizeModel {
         "30호": 22.5
     ]
     
-    public var onecentimeter: CGFloat {
-        let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height
-        let nativeWidth = UIScreen.main.nativeBounds.width
-        let nativeHeight = UIScreen.main.nativeBounds.height
-        let screenDiagonal = CGFloat(hypot(screenWidth, screenHeight)) // 대각선 길이 (포인트 단위)
-        let screenInches = DeviceInfo.screenSize(forWidth: nativeWidth, height: nativeHeight)! // 실제 화면 크기 (인치 단위)
-        let pointsPerInch = screenDiagonal / screenInches // 1인치당 포인트 수
-        return CGFloat(pointsPerInch / 2.54) // 1cm 길이 (포인트 단위)
-    }
-    
     // 직경을 받아 가장 가까운 반지 사이즈를 반환하는 메서드
     static func getRingSize(for diameter: Double) -> String {
         let closestSize = ringSizes.min { abs($0.value - diameter) < abs($1.value - diameter) }
