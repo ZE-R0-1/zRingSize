@@ -10,7 +10,7 @@ import SwiftUI
 // 측정 기록을 표시하는 View
 struct HistoryView: View {
     // HistoryViewModel 인스턴스를 환경 객체로 사용
-    @EnvironmentObject var viewModel: HistoryViewModel
+    @StateObject private var viewModel = HistoryViewModel()
     // 삭제 모드 상태를 관리하는 변수
     @State private var isDeleteMode = false
 

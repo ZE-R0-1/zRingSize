@@ -47,11 +47,6 @@ class MeasurementService {
         return Array(realm.objects(SizeRecord.self).sorted(byKeyPath: "date", ascending: false))
     }
     
-    // 최근 측정 데이터를 제한된 수만큼 가져오는 메서드
-    func getRecentMeasurements(limit: Int) -> [SizeRecord] {
-        return Array(realm.objects(SizeRecord.self).sorted(byKeyPath: "date", ascending: false).prefix(limit))
-    }
-    
     // 특정 ID의 측정 데이터를 삭제하는 메서드
     func deleteMeasurement(id: UUID) {
         if let measurementToDelete = realm.object(ofType: SizeRecord.self, forPrimaryKey: id) {

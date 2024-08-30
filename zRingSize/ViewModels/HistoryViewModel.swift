@@ -9,73 +9,93 @@ import RealmSwift
 import Combine
 import Foundation
 
-// 측정 기록 화면을 위한 ViewModel
 class HistoryViewModel: ObservableObject {
-    // 최근 측정 기록
-    @Published var recentMeasurements: [SizeRecord] = []
-    // 모든 측정 기록
+    // 발행된 속성들: SwiftUI 뷰가 이 변경사항을 관찰하고 UI를 업데이트합니다.
     @Published var allMeasurements: [SizeRecord] = []
-    // 오류 메시지
     @Published var errorMessage: String?
-    // 오류 표시 여부
     @Published var showingError: Bool = false
 
-    // Realm 변경 알림을 위한 토큰
+    // Realm 관련 프로퍼티
     private var notificationToken: NotificationToken?
-    // 측정 서비스 인스턴스
     private let measurementService = MeasurementService.shared
+    private var realm: Realm?
 
-    // 초기화 메서드
     init() {
+        setupRealm()
         fetchMeasurements()
         observeRealmChanges()
     }
 
-    // 소멸자: Realm 알림 토큰 해제
     deinit {
+        // 뷰 모델이 해제될 때 노티피케이션 토큰을 무효화합니다.
         notificationToken?.invalidate()
     }
 
-    // Realm 데이터 변경 감지 메서드
-    private func observeRealmChanges() {
-        let realm = try! Realm()
-        notificationToken = realm.objects(SizeRecord.self).observe { [weak self] _ in
-            self?.fetchMeasurements()
+    // Realm 인스턴스를 설정하는 메서드
+    private func setupRealm() {
+        do {
+            realm = try Realm()
+        } catch {
+            showError("Failed to initialize Realm: \(error.localizedDescription)")
         }
     }
 
-    // 측정 기록 가져오기
+    // Realm 변경사항을 관찰하는 메서드
+    private func observeRealmChanges() {
+        guard let realm = realm else { return }
+        notificationToken = realm.objects(SizeRecord.self).observe { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.fetchMeasurements()
+            }
+        }
+    }
+
+    // 측정 기록을 가져오는 메서드
     func fetchMeasurements() {
-        self.allMeasurements = measurementService.getMeasurements()
-        self.recentMeasurements = measurementService.getRecentMeasurements(limit: Constants.maxRecentMeasurements)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self, let realm = self.realm else { return }
+            let records = realm.objects(SizeRecord.self).sorted(byKeyPath: "date", ascending: false)
+            // freeze()를 사용하여 스레드 안전성 보장
+            self.allMeasurements = Array(records.freeze())
+        }
     }
 
-    // 측정 기록 삭제
+    // 측정 기록을 삭제하는 메서드
     func deleteMeasurement(id: UUID) {
-        measurementService.deleteMeasurement(id: id)
-        fetchMeasurements()
+        guard let realm = realm else { return }
+        DispatchQueue.main.async { [weak self] in
+            do {
+                try realm.write {
+                    if let objectToDelete = realm.object(ofType: SizeRecord.self, forPrimaryKey: id) {
+                        realm.delete(objectToDelete)
+                    }
+                }
+                self?.fetchMeasurements()
+            } catch {
+                self?.showError("Failed to delete measurement: \(error.localizedDescription)")
+            }
+        }
     }
-
-    // 측정 기록 상세 정보 문자열 생성
+    
+    // 측정 기록의 상세 정보를 문자열로 반환하는 메서드
     func getMeasurementDetails(_ measurement: SizeRecord) -> String {
         let sizeString = String(format: "%.1f", measurement.size * .pi)
         let typeString = measurement.type == SizeRecord.MeasurementType.ring.rawValue ? "반지 직경" : "손가락 둘레"
         return "\(typeString): \(sizeString) mm"
     }
     
-    // 예상 반지 사이즈 계산
+    // 예상 반지 사이즈를 계산하는 메서드
     func getEstimatedRingSize(_ measurement: SizeRecord) -> String {
         let diameter: Double
         if measurement.type == SizeRecord.MeasurementType.ring.rawValue {
             diameter = measurement.size
         } else {
-            // 손가락 둘레를 직경으로 변환
             diameter = SizeModel.fingerCircumferenceToRingDiameter(measurement.size)
         }
         return SizeModel.getRingSize(for: diameter)
     }
 
-    // 손가락 둘레 계산
+    // 손가락 둘레를 계산하는 메서드
     func getFingerCircumference(_ measurement: SizeRecord) -> String {
         if measurement.type == SizeRecord.MeasurementType.ring.rawValue {
             return String(format: "%.1f mm", SizeModel.ringDiameterToFingerCircumference(measurement.size))
@@ -84,9 +104,11 @@ class HistoryViewModel: ObservableObject {
         }
     }
     
-    // 오류 표시
+    // 에러 메시지를 표시하는 메서드
     private func showError(_ message: String) {
-        self.errorMessage = message
-        self.showingError = true
+        DispatchQueue.main.async { [weak self] in
+            self?.errorMessage = message
+            self?.showingError = true
+        }
     }
 }

@@ -14,6 +14,7 @@ class FingerViewModel: ObservableObject {
     @Published var fingerWidth: Double = Constants.minFingerWidth {
         didSet {
             updateRingSize()
+            performHapticFeedback()
         }
     }
     // 계산된 반지 사이즈 (예: "10호")
@@ -25,6 +26,8 @@ class FingerViewModel: ObservableObject {
     
     // 측정 서비스 인스턴스
     private let measurementService = MeasurementService.shared
+    
+    private let settingsViewModel = SettingsViewModel()
     
     // 초기화 시 반지 사이즈 업데이트
     init() {
@@ -48,13 +51,19 @@ class FingerViewModel: ObservableObject {
         }
     }
     
+    private func performHapticFeedback() {
+        settingsViewModel.performHapticFeedback()
+    }
+
     // 손가락 너비 증가 (최대값 제한)
     func incrementWidth() {
         fingerWidth = min(fingerWidth + 0.1, Constants.maxFingerWidth)
+        performHapticFeedback()
     }
     
     // 손가락 너비 감소 (최소값 제한)
     func decrementWidth() {
         fingerWidth = max(fingerWidth - 0.1, Constants.minFingerWidth)
+        performHapticFeedback()
     }
 }

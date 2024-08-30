@@ -13,6 +13,7 @@ class RingViewModel: ObservableObject {
     @Published var ringDiameter: Double = Constants.minRingDiameter {
         didSet {
             updateRingSize()
+            performHapticFeedback()
         }
     }
     
@@ -28,6 +29,8 @@ class RingViewModel: ObservableObject {
     // 측정 데이터를 저장하기 위한 서비스
     private let measurementService = MeasurementService.shared
     
+    private let settingsViewModel = SettingsViewModel()
+    
     // 초기화 시 반지 사이즈 업데이트
     init() {
         updateRingSize()
@@ -38,6 +41,10 @@ class RingViewModel: ObservableObject {
         self.ringSize = SizeModel.getRingSize(for: ringDiameter)
     }
     
+    private func performHapticFeedback() {
+        settingsViewModel.performHapticFeedback()
+    }
+
     // 측정 결과 저장
     func saveMeasurement(title: String) {
         do {
@@ -51,10 +58,12 @@ class RingViewModel: ObservableObject {
     // 내경을 0.1mm 증가 (최대값 제한)
     func incrementDiameter() {
         ringDiameter = min(ringDiameter + 0.1, Constants.maxRingDiameter)
+        performHapticFeedback()
     }
     
     // 내경을 0.1mm 감소 (최소값 제한)
     func decrementDiameter() {
         ringDiameter = max(ringDiameter - 0.1, Constants.minRingDiameter)
+        performHapticFeedback()
     }
 }

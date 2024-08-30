@@ -38,5 +38,5 @@ enum Constants {
     static let settingsTitle = "설정"
     
     // 기타 상수
-    static let maxRecentMeasurements = 5
+//    static let maxRecentMeasurements = 5
 }

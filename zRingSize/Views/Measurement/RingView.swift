@@ -15,6 +15,7 @@ struct RingView: View {
     @State private var measurementTitle = ""
     // 현재 화면의 표시 상태를 관리하는 환경 변수
     @Environment(\.presentationMode) var presentationMode
+    @FocusState private var isTitleFocused: Bool
 
     var body: some View {
         ZStack {
@@ -38,6 +39,11 @@ struct RingView: View {
         .alert(isPresented: $viewModel.showingError) {
             Alert(title: Text("오류"), message: Text(viewModel.errorMessage ?? "알 수 없는 오류가 발생했습니다."), dismissButton: .default(Text("확인")))
         }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.isTitleFocused = true
+            }
+        }
     }
 
     // 측정 제목 입력 섹션
@@ -49,6 +55,7 @@ struct RingView: View {
             TextField("예: 내 결혼반지", text: $measurementTitle)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .font(.body)
+                .focused($isTitleFocused)
         }
     }
     
