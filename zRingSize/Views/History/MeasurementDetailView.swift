@@ -10,6 +10,7 @@ import SwiftUI
 struct MeasurementDetailView: View {
     let measurement: SizeRecord
     @StateObject private var viewModel = HistoryViewModel()
+    @State private var adLoaded = true
     
     var body: some View {
         ScrollView {
@@ -34,6 +35,10 @@ struct MeasurementDetailView: View {
                 .shadow(radius: 2)
             }
             .padding()
+            VStack {
+                GoogleAdView(adLoaded: $adLoaded)
+                    .frame(height: 50)  // 광고의 높이에 맞게 조정
+            }
         }
         .navigationTitle(measurement.title)
         .background(Color(.systemGroupedBackground).edgesIgnoringSafeArea(.all))
