@@ -327,7 +327,6 @@
 			children = (
 				DA2A67E22C2941820048AED5 /* HomeView.swift */,
 				DA9840762C54EA52003DBBB1 /* MeasurementGridView.swift */,
-				DA9840932C71FFEE003DBBB1 /* MeasurementRowView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -358,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				DA9840782C54EA5E003DBBB1 /* HistoryView.swift */,
+				DA9840932C71FFEE003DBBB1 /* MeasurementRowView.swift */,
 				DA98407C2C54EA85003DBBB1 /* MeasurementDetailView.swift */,
 			);
 			path = History;

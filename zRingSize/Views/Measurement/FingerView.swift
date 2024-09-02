@@ -16,6 +16,7 @@ struct FingerView: View {
     // 현재 화면의 표시 상태를 관리하는 환경 변수
     @Environment(\.presentationMode) var presentationMode
     @FocusState private var isTitleFocused: Bool
+    @State private var adLoaded = true
 
     var body: some View {
         ZStack {
@@ -32,6 +33,10 @@ struct FingerView: View {
                     saveButton
                 }
                 .padding()
+                VStack {
+                    GoogleAdView(adLoaded: $adLoaded)
+                        .frame(height: 50)  // 광고의 높이에 맞게 조정
+                }
             }
         }
         .navigationBarTitle("손가락 측정", displayMode: .inline)

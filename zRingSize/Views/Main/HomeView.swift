@@ -32,11 +32,17 @@ struct HomeView: View {
                     GoogleAdView(adLoaded: $adLoaded)
                         .frame(height: 50)  // 광고의 높이에 맞게 조정
                 }
-                .padding(.bottom, 40)  // 하단에서 20포인트 떨어지게 설정
+                .padding(.bottom, 30)  // 하단에서 20포인트 떨어지게 설정
             }
             .edgesIgnoringSafeArea(.bottom)  // 하단 SafeArea 무시
-            .navigationTitle(Constants.appName)
-            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text(Constants.appName)
+                        .font(.system(size: 24, weight: .bold))  // 크기와 굵기 조절
+                        .foregroundColor(.black)  // 색상 설정
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: settingsButton)
             .sheet(isPresented: $showingAddMeasurement) {
                 if viewModel.selectedTab == .ring {
@@ -52,7 +58,7 @@ struct HomeView: View {
             }
         }
     }
-
+    
     private var settingsButton: some View {
         NavigationLink(destination: SettingsView()) {
             Image(systemName: "gearshape.fill")
@@ -62,7 +68,6 @@ struct HomeView: View {
     }
 }
 
-// 미리보기 제공자
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
