@@ -12,7 +12,7 @@ struct SizeChartView: View {
     
     var body: some View {
         List {
-            ForEach(SizeModel.ringSizes.sorted(by: { $0.key < $1.key }), id: \.key) { size, diameter in
+            ForEach(SizeModel.ringSizes.sorted(by: { $0.value < $1.value }), id: \.key) { size, diameter in
                 HStack {
                     Text(size)
                     Spacer()

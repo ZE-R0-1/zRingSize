@@ -33,9 +33,9 @@ struct MeasurementGridView: View {
             VStack(spacing: 15) {
                 Image(systemName: icon)
                     .font(.system(size: 40))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(hex: "#8D6E63"))
                 Text(title)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(hex: "#8D6E63"))
                     .font(.headline)
             }
             .frame(height: 150)
@@ -44,7 +44,7 @@ struct MeasurementGridView: View {
                 LinearGradient(gradient: Gradient(colors: Constants.gradientColors), startPoint: .topLeading, endPoint: .bottomTrailing)
             )
             .cornerRadius(Constants.largecornerRadius)
-            .shadow(color: Constants.shadowColor, radius: Constants.shadowRadius, x: 0, y: 5)
+            .shadow(color: Color(hex: "#5D4037").opacity(0.2), radius: Constants.shadowRadius, x: 0, y: 5)
         }
     }
 }

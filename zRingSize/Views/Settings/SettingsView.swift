@@ -12,6 +12,7 @@ struct SettingsView: View {
     @StateObject private var viewModel = SettingsViewModel()
     // 설정 초기화 알림 표시 여부
     @State private var showingResetAlert = false
+    @State private var isShowingMailView = false
     
     var body: some View {
         Form {
@@ -20,19 +21,6 @@ struct SettingsView: View {
                 // 진동 설정
                 SettingsItemView(title: "진동 허용") {
                     Toggle("", isOn: $viewModel.isVibrationEnabled)
-                }
-                
-                // 측정 단위 설정
-                SettingsItemView(title: "측정 단위") {
-                    Picker("", selection: $viewModel.measurementUnit) {
-                        ForEach(SettingsViewModel.MeasurementUnit.allCases, id: \.self) { unit in
-                            Text(unit.rawValue.capitalized).tag(unit)
-                        }
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .onChange(of: viewModel.measurementUnit) { newValue in
-                        viewModel.changeMeasurementUnit(to: newValue)
-                    }
                 }
             }
             
@@ -43,6 +31,12 @@ struct SettingsView: View {
                 NavigationLink("개인정보 처리방침", destination: WebView(url: Page.Policy.rawValue))
             }
             
+            Section(header: Text("피드백")) {
+                Button("오류 신고 / 피드백 보내기") {
+                    isShowingMailView = true
+                }
+            }
+            
             // 앱 정보 섹션
             Section(header: Text("앱 정보")) {
                 SettingsItemView(title: "버전") {
@@ -50,34 +44,26 @@ struct SettingsView: View {
                         .foregroundColor(.secondary)
                 }
             }
-            
-            // 설정 초기화 섹션
-            Section {
-                Button("모든 설정 초기화") {
-                    showingResetAlert = true
-                }
-                .foregroundColor(.red)
-            }
         }
         .navigationTitle("설정")
-        // 설정 초기화 확인 알림
-        .alert(isPresented: $showingResetAlert) {
-            Alert(
-                title: Text("설정 초기화"),
-                message: Text("모든 설정을 초기화하시겠습니까?"),
-                primaryButton: .destructive(Text("초기화")) {
-                    viewModel.resetAllSettings()
-                },
-                secondaryButton: .cancel()
-            )
+        .sheet(isPresented: $isShowingMailView) {
+            MailView(isShowing: $isShowingMailView, result: { result in
+                switch result {
+                case .success:
+                    print("Email sent successfully")
+                case .failure(let error):
+                    print("Failed to send email with error:", error)
+                }
+            })
         }
     }
 }
 
 // 웹 페이지 URL 열거형
+
 enum Page: String {
-    case Help = "https://www.zringsize.com/help"
-    case Policy = "https://www.zringsize.com/privacy-policy"
+    case Help = "https://velog.io/@ze-r0/%EB%B0%98%EC%A7%80%EC%B8%A1%EC%A0%95%ED%95%98%EA%B8%B0"
+    case Policy = "https://velog.io/@ze-r0/iOS-%EC%95%B1-%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4-%EC%B2%98%EB%A6%AC%EB%B0%A9%EC%B9%A8"
 }
 
 // 미리보기 제공자

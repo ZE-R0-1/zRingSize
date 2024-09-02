@@ -19,7 +19,9 @@ struct GoogleAdView: View {
             } else {
                 Text("현재 표시할 광고가 없습니다")
                     .frame(height: 50)  // 광고의 높이와 동일하게 설정
-                    .background(Color.gray.opacity(0.2))
+                    .background(Color.white)  // 광고 배경색 추가
+                    .cornerRadius(8)  // 모서리 둥글게
+                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: -2)  // 상단에 약간의 그림자 추가
             }
         }
     }
@@ -35,8 +37,8 @@ struct BannerViewController: UIViewControllerRepresentable {
         banner.rootViewController = viewController
         viewController.view.addSubview(banner)
         viewController.view.frame = CGRect(origin: .zero, size: bannerSize.size)
-        banner.adUnitID = "ca-app-pub-6342983620525776/7065190857"
-//        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716" // 테스트
+//        banner.adUnitID = "ca-app-pub-6342983620525776/7065190857"
+        banner.adUnitID = "ca-app-pub-3940256099942544/2934735716" // 테스트
         banner.load(GADRequest())
         banner.delegate = context.coordinator
         return viewController

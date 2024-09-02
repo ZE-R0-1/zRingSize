@@ -13,7 +13,7 @@ enum Constants {
     static let minFingerWidth: Double = 13.1
     static let maxFingerWidth: Double = 22.5
 
-    static let primaryColor = Color(hex: "#4A90E2")
+    static let primaryColor = Color(hex: "#8D6E63")
     static let secondaryColor = Color(hex: "#F5A623")
     static let accentColor = Color(hex: "#50E3C2")
     static let backgroundColor = Color(hex: "#F8F8F8")
@@ -25,8 +25,8 @@ enum Constants {
     static let shadowRadius: CGFloat = 10
     static let shadowColor = Color.black.opacity(0.1)
 
-    static let gradientColors = [Color(hex: "#4A90E2"), Color(hex: "#50E3C2")]
-
+    static let gradientColors = [Color(hex: "#FFF8E1"), Color(hex: "#FFE0B2")]
+    
     // 애니메이션 관련 상수
     static let defaultAnimationDuration: Double = 0.3
     

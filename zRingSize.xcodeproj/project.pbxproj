@@ -24,6 +24,7 @@
 		B0E047F02BB1459F0042E91B /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047EF2BB1459F0042E91B /* RingView.swift */; };
 		B0E047F22BB145B10042E91B /* FingerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E047F12BB145B10042E91B /* FingerView.swift */; };
 		CE4451E52C80561D000298F9 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = DA9840962C7EBD6C003DBBB1 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE4451E82C8571F8000298F9 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4451E72C8571F8000298F9 /* MailView.swift */; };
 		DA2077FC2BF3212C00C38A8C /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = DA2077FB2BF3212C00C38A8C /* GoogleMobileAds */; };
 		DA2A67C52C2932D40048AED5 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67C42C2932D40048AED5 /* Color+Extensions.swift */; };
 		DA2A67C72C2933120048AED5 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2A67C62C2933120048AED5 /* Date+Extensions.swift */; };
@@ -102,6 +103,7 @@
 		B0E047DB2BB117B20042E91B /* zRingSizeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zRingSizeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B0E047EF2BB1459F0042E91B /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		B0E047F12BB145B10042E91B /* FingerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerView.swift; sourceTree = "<group>"; };
+		CE4451E72C8571F8000298F9 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		DA2077FD2BF3457B00C38A8C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		DA2A67C42C2932D40048AED5 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		DA2A67C62C2933120048AED5 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				DA98407E2C54EA92003DBBB1 /* SettingsView.swift */,
 				DA9840802C54EA9C003DBBB1 /* SettingsItemView.swift */,
 				DA98408B2C54F143003DBBB1 /* SizeChartView.swift */,
+				CE4451E72C8571F8000298F9 /* MailView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */,
 				B0A28D602BBD12BE00BAA025 /* SizeModel.swift in Sources */,
 				B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */,
+				CE4451E82C8571F8000298F9 /* MailView.swift in Sources */,
 				DA2A67E52C2941E30048AED5 /* HomeViewModel.swift in Sources */,
 				B0E047BA2BB117B00042E91B /* zRingSizeApp.swift in Sources */,
 				DA9840792C54EA5E003DBBB1 /* HistoryView.swift in Sources */,

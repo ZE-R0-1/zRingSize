@@ -6,37 +6,38 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
-// 앱의 메인 홈 화면을 나타내는 View
 struct HomeView: View {
-    // HomeViewModel 인스턴스 생성
     @StateObject private var viewModel = HomeViewModel()
-    // HistoryViewModel 인스턴스 생성
     @StateObject private var historyViewModel = HistoryViewModel()
-    // 측정 추가 화면 표시 여부를 관리하는 상태 변수
     @State private var showingAddMeasurement = false
+    @State private var adLoaded = true
 
     var body: some View {
         NavigationView {
-            ZStack {
-                // 배경색 설정
-                Constants.backgroundColor.edgesIgnoringSafeArea(.all)
-
+            ZStack(alignment: .bottom) {
                 VStack(spacing: Constants.padding) {
-                    // 측정 그리드 뷰
                     MeasurementGridView(showingAddMeasurement: $showingAddMeasurement)
                         .environmentObject(viewModel)
-                    // 측정 기록 뷰
                     HistoryView()
                         .environmentObject(historyViewModel)
                     Spacer()
                 }
                 .padding()
+                .background(Constants.backgroundColor.edgesIgnoringSafeArea(.all))
+
+                // 광고 뷰 추가
+                VStack {
+                    GoogleAdView(adLoaded: $adLoaded)
+                        .frame(height: 50)  // 광고의 높이에 맞게 조정
+                }
+                .padding(.bottom, 40)  // 하단에서 20포인트 떨어지게 설정
             }
+            .edgesIgnoringSafeArea(.bottom)  // 하단 SafeArea 무시
             .navigationTitle(Constants.appName)
             .navigationBarTitleDisplayMode(.large)
             .navigationBarItems(trailing: settingsButton)
-            // 측정 추가 화면 표시
             .sheet(isPresented: $showingAddMeasurement) {
                 if viewModel.selectedTab == .ring {
                     RingView()
@@ -44,7 +45,6 @@ struct HomeView: View {
                     FingerView()
                 }
             }
-            // 오류 알림 표시
             .alert(isPresented: $historyViewModel.showingError) {
                 Alert(title: Text("오류"),
                       message: Text(historyViewModel.errorMessage ?? "알 수 없는 오류가 발생했습니다."),
@@ -53,7 +53,6 @@ struct HomeView: View {
         }
     }
 
-    // 설정 버튼
     private var settingsButton: some View {
         NavigationLink(destination: SettingsView()) {
             Image(systemName: "gearshape.fill")
