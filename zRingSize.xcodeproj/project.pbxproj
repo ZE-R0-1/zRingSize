@@ -38,9 +38,6 @@
 		DA98407D2C54EA85003DBBB1 /* MeasurementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98407C2C54EA85003DBBB1 /* MeasurementDetailView.swift */; };
 		DA98407F2C54EA92003DBBB1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98407E2C54EA92003DBBB1 /* SettingsView.swift */; };
 		DA9840812C54EA9C003DBBB1 /* SettingsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9840802C54EA9C003DBBB1 /* SettingsItemView.swift */; };
-		DA9840832C54EAA7003DBBB1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9840822C54EAA7003DBBB1 /* CustomButton.swift */; };
-		DA9840852C54EAB1003DBBB1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9840842C54EAB1003DBBB1 /* CustomTextField.swift */; };
-		DA9840872C54EAB8003DBBB1 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9840862C54EAB8003DBBB1 /* CustomAlert.swift */; };
 		DA98408C2C54F143003DBBB1 /* SizeChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98408B2C54F143003DBBB1 /* SizeChartView.swift */; };
 		DA98408E2C54F1E8003DBBB1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA98408D2C54F1E8003DBBB1 /* WebView.swift */; };
 		DA9840942C71FFEE003DBBB1 /* MeasurementRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9840932C71FFEE003DBBB1 /* MeasurementRowView.swift */; };
@@ -117,9 +114,6 @@
 		DA98407C2C54EA85003DBBB1 /* MeasurementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementDetailView.swift; sourceTree = "<group>"; };
 		DA98407E2C54EA92003DBBB1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DA9840802C54EA9C003DBBB1 /* SettingsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemView.swift; sourceTree = "<group>"; };
-		DA9840822C54EAA7003DBBB1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		DA9840842C54EAB1003DBBB1 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		DA9840862C54EAB8003DBBB1 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		DA98408B2C54F143003DBBB1 /* SizeChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeChartView.swift; sourceTree = "<group>"; };
 		DA98408D2C54F1E8003DBBB1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		DA9840932C71FFEE003DBBB1 /* MeasurementRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementRowView.swift; sourceTree = "<group>"; };
@@ -332,9 +326,6 @@
 		DA9840712C54E9FF003DBBB1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				DA9840822C54EAA7003DBBB1 /* CustomButton.swift */,
-				DA9840842C54EAB1003DBBB1 /* CustomTextField.swift */,
-				DA9840862C54EAB8003DBBB1 /* CustomAlert.swift */,
 				DA98408D2C54F1E8003DBBB1 /* WebView.swift */,
 			);
 			path = Common;
@@ -525,7 +516,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E047F22BB145B10042E91B /* FingerView.swift in Sources */,
-				DA9840872C54EAB8003DBBB1 /* CustomAlert.swift in Sources */,
 				DA98408C2C54F143003DBBB1 /* SizeChartView.swift in Sources */,
 				DA2A67E32C2941820048AED5 /* HomeView.swift in Sources */,
 				DA9840812C54EA9C003DBBB1 /* SettingsItemView.swift in Sources */,
@@ -550,10 +540,8 @@
 				DA2A67C72C2933120048AED5 /* Date+Extensions.swift in Sources */,
 				2291B2462BE5EE8B00920C29 /* GoogleAdView.swift in Sources */,
 				DA2A67C52C2932D40048AED5 /* Color+Extensions.swift in Sources */,
-				DA9840832C54EAA7003DBBB1 /* CustomButton.swift in Sources */,
 				DA98408E2C54F1E8003DBBB1 /* WebView.swift in Sources */,
 				DA98406D2C54E7BC003DBBB1 /* Constants.swift in Sources */,
-				DA9840852C54EAB1003DBBB1 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
