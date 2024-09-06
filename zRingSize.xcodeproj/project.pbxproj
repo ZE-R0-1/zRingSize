@@ -11,7 +11,6 @@
 		B03A6F272BE36992007FCF3C /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A6F262BE36992007FCF3C /* DeviceInfo.swift */; };
 		B03E6C4A2BD8D0BA0015AA9A /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E6C492BD8D0BA0015AA9A /* HistoryViewModel.swift */; };
 		B0A28D602BBD12BE00BAA025 /* SizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A28D5F2BBD12BE00BAA025 /* SizeModel.swift */; };
-		B0CF52FB2BD882E100DA1841 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CF52FA2BD882C400DA1841 /* libsqlite3.tbd */; };
 		B0CF53052BD88D1B00DA1841 /* SizeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF53042BD88D1B00DA1841 /* SizeRecord.swift */; };
 		B0DD22A72BB3D82900B66190 /* RingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A62BB3D82900B66190 /* RingViewModel.swift */; };
 		B0DD22AA2BB3E9CD00B66190 /* FingerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD22A92BB3E9CD00B66190 /* FingerViewModel.swift */; };
@@ -136,7 +135,6 @@
 			files = (
 				DA9840972C7EBD6C003DBBB1 /* RealmSwift in Frameworks */,
 				DA2077FC2BF3212C00C38A8C /* GoogleMobileAds in Frameworks */,
-				B0CF52FB2BD882E100DA1841 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,7 +734,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.6;
+				MARKETING_VERSION = 2.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -777,7 +775,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.6;
+				MARKETING_VERSION = 2.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.zRingSize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
