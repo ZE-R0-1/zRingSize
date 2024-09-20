@@ -9,6 +9,7 @@ import SwiftUI
 import GoogleMobileAds
 
 struct SettingsView: View {
+    @Environment(\.presentationMode) var presentationMode
     @StateObject private var viewModel = SettingsViewModel()
     @State private var showingResetAlert = false
     @State private var isShowingMailView = false
@@ -48,14 +49,22 @@ struct SettingsView: View {
                 }
             }
             
-            // 광고 배너 뷰
-            VStack {
-                GoogleAdView(adLoaded: $adLoaded)
-                    .frame(height: 50)  // 광고의 높이에 맞게 조정
-            }
-            .padding(.bottom, 20)  // 하단에서 간격 조정
+//            // 광고 배너 뷰
+//            VStack {
+//                GoogleAdView(adLoaded: $adLoaded)
+//                    .frame(height: 50)  // 광고의 높이에 맞게 조정
+//            }
+//            .padding(.bottom, 20)  // 하단에서 간격 조정
         }
         .navigationTitle("설정")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.left")
+            }
+        })
         .sheet(isPresented: $isShowingMailView) {
             MailView(isShowing: $isShowingMailView, result: { result in
                 switch result {
